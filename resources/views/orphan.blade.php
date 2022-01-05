@@ -112,6 +112,12 @@
               <label for="exampleFormControlInput1">الفرع  </label>
               <input type="text" name="branch" class="form-control"   >
             </div>
+			<label for="exampleFormControlInput1">رقم البطاقة  </label>
+              <input type="text" name="id_num" class="form-control"   >
+            </div>
+			<label for="exampleFormControlInput1">تاريخ الانتهاء  </label>
+              <input type="text" name="date" class="form-control"   >
+            </div>
 
             <div class="form-group">
 

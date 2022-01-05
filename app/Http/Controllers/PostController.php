@@ -51,7 +51,8 @@ class PostController extends Controller
     $post['orphan_type'] = $request->input('orphan_type');
     $post['amount'] = $request->input('amount');
     $post['branch'] = $request->input('branch');
-  
+    $post['id_num'] = $request->input('id_num');
+    $post['date'] = $request->input('date');
 
     $post->save();
     
