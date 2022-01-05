@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\ApiPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/register', [AuthController::class,'register']);
 Route::post('/login', [AuthController::class,'login']);
 
-Route::middleware('auth:sanctum')->group(function () {
-Route::get('/posts', [PostController::class,'index']);
-Route::post('/post', [PostController::class,'store']);
-});
+
+Route::get('/posts', [ApiPostController::class,'index']);
+Route::post('/post', [ApiPostController::class,'store']);
+Route::get('/posts/{id}', [ApiPostController::class,'show']);
+
