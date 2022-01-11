@@ -102,7 +102,13 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">نوع الكفالة  </label>
-              <input type="text" name="orphan_type" class="form-control"   >
+
+			  <select name="orphan_type" id="cars">
+    <option value="volvo">كفالة يتيم</option>
+    <option value="saab">طالب علم</option>
+    <option value="opel">كفالة اسرة</option>
+    <option value="audi">ذوي احتياجات</option>
+  </select>
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">كمية التبرع  </label>
@@ -115,9 +121,7 @@
 			<label for="exampleFormControlInput1">رقم البطاقة  </label>
               <input type="text" name="id_num" class="form-control"   >
             </div>
-			<label for="exampleFormControlInput1">تاريخ الانتهاء  </label>
-              <input type="text" name="date" class="form-control"   >
-            </div>
+			
 
             <div class="form-group">
 

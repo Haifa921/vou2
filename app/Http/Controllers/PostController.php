@@ -59,4 +59,8 @@ class PostController extends Controller
     return redirect('posts');
     
     }
+    public function donate()
+    {
+        return view('dontate.donate');
+    }
 }
