@@ -25,3 +25,4 @@ Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create'
 Route::get('/post/donate', [App\Http\Controllers\PostController::class, 'donate'])->name('post.donate');
 //Route::get('/post/create', 'PostController@create' )->name('post.create');
 Route::post('/post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+Route::post('/post/store1', [App\Http\Controllers\PostController::class, 'store1'])->name('post.store1');

@@ -59,6 +59,89 @@
 	<![endif]-->
 </head>
 <body>
-    
+ 
+<div class="row">
+
+@if (count($errors) > 0)
+<ul>
+	@foreach ($errors->all() as $item)
+		<li>
+			{{$item}}
+		</li>
+	@endforeach
+</ul>
+@endif
+
+
+<div class="col">
+<form action="{{route('post.store1')}}" method="POST" enctype="multipart/form-data">
+@csrf
+   
+
+
+<div class="form-group">
+	  <label for="exampleFormControlInput1">الاسم   </label>
+	  <input type="text" name="name" class="form-control"   >
+	</div>
+   
+	<div class="form-group">
+	  <label for="exampleFormControlInput1">رقم الموبايل  </label>
+	  <input type="text" name="phone" class="form-control"   >
+	</div>
+	<div class="form-group">
+	  <label for="exampleFormControlInput1">الايميل  </label>
+	  <input type="email" name="email" class="form-control"   >
+	</div>
+	<div class="form-group">
+	  <label for="exampleFormControlInput1">نوع التبرع  </label>
+
+	  <select name="type" id="cars">
+<option value="ملابس شتوية"> ملابس شتوية</option>
+<option value="جهاز تدفئة">جهاز تدفئة</option>
+<option value="طرد صحي">طرد صحي </option>
+<option value="طرد غذائي"> طرد غذائي</option>
+<option value="ذكاة مال"> ذكاة مال </option>
+<option value="سلة غذائية"> سلة غذائية</option>
+<option value="صدقات"> صدقات </option>
+<option value="اطعام مسكين"> اطعام مسكين</option>
+</select>
+	</div>
+	<div class="form-group">
+	  <label for="exampleFormControlInput1">كمية التبرع  </label>
+	  <input type="text" name="amount" class="form-control"   >
+	</div>
+	
+	
+
+	<div class="form-group">
+
+	<a href="">  <button class="btn btn-danger" type="submit"> تبرع</button></a>
+	
+	</div>
+
+  </form>
+</div>
+</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/sticky.js"></script>
+
+<!-- Stellar -->
+<script src="js/jquery.stellar.min.js"></script>
+<!-- Superfish -->
+<script src="js/hoverIntent.js"></script>
+<script src="js/superfish.js"></script>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
+
