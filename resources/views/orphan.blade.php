@@ -104,10 +104,10 @@
               <label for="exampleFormControlInput1">نوع الكفالة  </label>
 
 			  <select name="orphan_type" id="cars">
-    <option value="volvo">كفالة يتيم</option>
-    <option value="saab">طالب علم</option>
-    <option value="opel">كفالة اسرة</option>
-    <option value="audi">ذوي احتياجات</option>
+    <option value="كفالة يتيم">كفالة يتيم</option>
+    <option value="طالب علم">طالب علم</option>
+    <option value="كفالة اسرة">كفالة اسرة</option>
+    <option value="ذوي احتياجات">ذوي احتياجات</option>
   </select>
             </div>
             <div class="form-group">
