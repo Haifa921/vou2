@@ -11,3 +11,4 @@ class post extends Model
     protected $table="posts";
     protected $fillable =['arabic','english','phone','email','orphan_type','amount','branch','id_num','date'];
 }
+//edit 
