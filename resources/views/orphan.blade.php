@@ -101,7 +101,7 @@
               <input type="email" name="email" class="form-control"   >
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1">نوع الكفالة   </label>
+              <label for="exampleFormControlInput1">نوع الكفالة  </label>
 
 			  <select name="orphan_type" id="cars">
     <option value="كفالة يتيم">كفالة يتيم</option>
