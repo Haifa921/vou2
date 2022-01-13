@@ -9,5 +9,6 @@ class post extends Model
 {
     use HasFactory;
     protected $table="posts";
-    protected $fillable =['arabic','english','phone','email','orphan_type','amount','branch'];
+    protected $fillable =['arabic','english','phone','email','orphan_type','amount','branch','id_num','date'];
 }
+//edit ننن

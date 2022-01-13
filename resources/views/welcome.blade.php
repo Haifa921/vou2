@@ -78,14 +78,15 @@
                             <li><a href="about.html">من نحن</a></li>
 							
 							<li><a href="contact.html">تواصل معنا</a></li>
+							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
+                       
         @if (Route::has('login'))
                 <li>
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-                       <li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
-                       <li><a class="active" href=""> تبرع الأن</a></li>
+                      
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
                         @endif
@@ -107,7 +108,7 @@
 				<div class="desc animate-box">
 					<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
 					
-					<span><a class="btn btn-primary btn-lg" href="#">تبرع الأن</a></span>
+					<span><a class="btn btn-primary btn-lg" href="{{ route('post.donate') }}">تبرع الأن</a></span>
 				</div>
 			</div>
 

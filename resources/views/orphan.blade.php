@@ -102,7 +102,13 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">نوع الكفالة  </label>
-              <input type="text" name="orphan_type" class="form-control"   >
+
+			  <select name="orphan_type" id="cars">
+    <option value="كفالة يتيم">كفالة يتيم</option>
+    <option value="طالب علم">طالب علم</option>
+    <option value="كفالة اسرة">كفالة اسرة</option>
+    <option value="ذوي احتياجات">ذوي احتياجات</option>
+  </select>
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">كمية التبرع  </label>
@@ -112,6 +118,10 @@
               <label for="exampleFormControlInput1">الفرع  </label>
               <input type="text" name="branch" class="form-control"   >
             </div>
+			<label for="exampleFormControlInput1">رقم البطاقة  </label>
+              <input type="text" name="id_num" class="form-control"   >
+            </div>
+			
 
             <div class="form-group">
 

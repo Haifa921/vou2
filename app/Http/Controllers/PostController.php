@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\post;
+use App\Models\donate;
 class PostController extends Controller
 {
     public function index(){
@@ -51,11 +52,32 @@ class PostController extends Controller
     $post['orphan_type'] = $request->input('orphan_type');
     $post['amount'] = $request->input('amount');
     $post['branch'] = $request->input('branch');
-  
+    $post['id_num'] = $request->input('id_num');
+    $post['date'] = $request->input('date');
 
     $post->save();
     
     return redirect('posts');
     
     }
+    public function donate()
+    {
+        return view('dontate.donate');
+    }
+    public function store1(Request $request){
+        $post = new donate();
+        $post['type'] = $request->input('type');
+        $post['name'] = $request->input('name');
+        $post['phone'] = $request->input('phone');
+       
+        $post['email'] = $request->input('email');
+       
+        $post['amount'] = $request->input('amount');
+        
+    
+        $post->save();
+        
+        return redirect('donates');
+        
+        }
 }
