@@ -1431,11 +1431,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<< HEAD
-            "time": "2022-01-05T14:52:50+00:00"
-=======
             "time": "2022-01-04T16:23:21+00:00"
->>>>>>> b5028e9191630ade283df8c8933b91fb751f998b
         },
         {
             "name": "laravel/jetstream",

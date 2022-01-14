@@ -24,7 +24,7 @@ Route::post('/register', [AuthController::class,'register']);
 Route::post('/login', [AuthController::class,'login']);
 
 
-Route::get('/posts', [ApiPostController::class,'index']);
 Route::post('/post', [ApiPostController::class,'store']);
+Route::get('/posts', [ApiPostController::class,'index']);
 Route::get('/posts/{id}', [ApiPostController::class,'show']);
 

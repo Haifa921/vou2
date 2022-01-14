@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\post;
-use App\Http\postresource;
+use App\Http\Resources\postresource;
 use Illuminate\Http\Request;
 
 class ApiPostController extends Controller
