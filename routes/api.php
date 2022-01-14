@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ApiPostController;
+use App\Http\Controllers\ApiDonateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,6 @@ Route::post('/post', [ApiPostController::class,'store']);
 Route::get('/posts', [ApiPostController::class,'index']);
 Route::get('/posts/{id}', [ApiPostController::class,'show']);
 
+Route::post('/postd', [ApiDonateController::class,'store']);
+Route::get('/postsd', [ApiDonateController::class,'index']);
+Route::get('/postsd/{id}', [ApiDonateController::class,'show']);
