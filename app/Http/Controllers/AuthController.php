@@ -50,7 +50,9 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         $tokenResult = $user->createToken('authToken')->plainTextToken;
         return response()->json([
-            'status_code' => 200, 'token' => $tokenResult,
+            'status_code' => 'true',
+            'message' => 'تم تسجيل الدخول بنجاح',
+             'token' => $tokenResult,
             'id' => $user->id, 'name' => $user->name,'email' => $user->email
         ]);
     }
