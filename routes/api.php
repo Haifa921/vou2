@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/register', [AuthController::class,'register']);
 Route::post('/login', [AuthController::class,'login']);
-
+Route::get('/loginshow/{id}', [AuthController::class,'show']);
 
 Route::post('/post', [ApiPostController::class,'store']);
 Route::get('/posts', [ApiPostController::class,'index']);

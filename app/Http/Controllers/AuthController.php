@@ -51,7 +51,7 @@ class AuthController extends Controller
         $tokenResult = $user->createToken('authToken')->plainTextToken;
         return response()->json([
             'status_code' => 200, 'token' => $tokenResult,
-            'id' => $user->id, 'name' => $user->name
+            'id' => $user->id, 'name' => $user->name,'email' => $user->email
         ]);
     }
 
@@ -59,5 +59,9 @@ class AuthController extends Controller
     {
         $request->user()->currentAccessToken()->delete();
         return response()->json(['status_code' => 200, 'message' => 'token deleted succesfuly']);
+    }
+    public function show($id){
+        $post = User::findOrFail($id);
+        return new usereresource($post);
     }
 }
