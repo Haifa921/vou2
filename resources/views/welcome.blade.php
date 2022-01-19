@@ -104,7 +104,7 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/Untitled.jpg);">
 				<div class="desc animate-box">
 					<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
 					
@@ -140,7 +140,7 @@
 							<div class="feature-copy">
 								<h3>كفالة مريض</h3>
 								<p>من نفس عن مؤمن كربة من كرب الدنيا ، نفس الله عنه كربة من كرب يوم القيامة ، ومن يسّر على معسر ، يسّر الله عليه في الدنيا والآخرة ،</p>
-								<p><a href="#">Learn More</a></p>
+								<p><a href="#">اكفل</a></p>
 							</div>
 						</div>
 
@@ -169,8 +169,8 @@
 
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-						<h3>Our Gallery</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+						<h3>نعيش السعادة عبر العطاء</h3>
+						<p>تبرعك هو الأمل الذي يحمي طرفاً لناجٍ من الموت أو مريض لم يعد لديه المال لإنقاذ حياته. مئات من المرضى بحاجة عمليات جراحية للعودة للحياة، تبرع الآن وانقذ حياتهم. .</p>
 					</div>
 				</div>
 
@@ -181,36 +181,24 @@
 
 							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_1.jpg); ">
 								<a href="#" class="color-3">
-									<div class="case-studies-summary">
-										<span>Give Love</span>
-										<h2>Donation is caring</h2>
-									</div>
+								
 								</a>
 							</li>
 						
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_3.jpg); ">
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/person_3.jpg); ">
 								<a href="#" class="color-4">
-									<div class="case-studies-summary">
-										<span>Give Love</span>
-										<h2>Donation is caring</h2>
-									</div>
+									
 								</a>
 							</li>
 
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_1.jpg); "> 
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/person_1.jpg); "> 
 								<a href="#" class="color-5">
-									<div class="case-studies-summary">
-										<span>Give Love</span>
-										<h2>Donation is caring</h2>
-									</div>
+									
 								</a>
 							</li>
-							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_3.jpg); ">
+							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_2.jpg); ">
 								<a href="#" class="color-6">
-									<div class="case-studies-summary">
-										<span>Give Love</span>
-										<h2>Donation is caring</h2>
-									</div>
+								
 								</a>
 							</li>
 						</ul>		
@@ -239,7 +227,6 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2016 Free Html5 <a href="#">Charity</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
 						</div>
 					</div>
 				</div>
