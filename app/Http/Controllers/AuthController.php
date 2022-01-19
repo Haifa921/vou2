@@ -26,9 +26,14 @@ class AuthController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
         return response()->json([
-            'status_code' => 200,
+            'status_code' => 'true',
             'message' => 'user created succesfuly',
-            'token' => $user->createToken($request->name)->plainTextToken
+            'token' => $user->createToken($request->name)->plainTextToken,
+            
+            'message' => 'تم تسجيل الدخول بنجاح',
+            
+             'data:{',
+            'id' => $user->id, 'name' => $user->name,'email' => $user->email
         ]);
     }
 
