@@ -45,7 +45,7 @@ class AuthController extends Controller
         }
         $credential = request(['email', 'password']);
         if (!Auth::attempt($credential)) {
-            return response()->json(['status_code' => 500, 'message' => 'nonauthoized']);
+            return response()->json(['status_code' => 'false', 'message' => 'nonauthoized']);
         }
         $user = User::where('email', $request->email)->first();
         $tokenResult = $user->createToken('authToken')->plainTextToken;
@@ -53,6 +53,7 @@ class AuthController extends Controller
             'status_code' => 'true',
             'message' => 'تم تسجيل الدخول بنجاح',
              'token' => $tokenResult,
+             'data:{',
             'id' => $user->id, 'name' => $user->name,'email' => $user->email
         ]);
     }
