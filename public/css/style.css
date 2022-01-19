@@ -1467,4 +1467,33 @@ figure {
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
 
+.form-control {
+  display: block;
+  width: 35%;}
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: inherit;
+  }
+  .card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color:  #ff5722;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.H1-color{
+  color: #ffffff;
+}
+.form-control {
+  background-color: #ffffff !important
+}
+ .text-white {
+  color: rgb(255, 255, 255)!important;
+}
+.btn-secondary{
+  background-color:  #ff5722;
+
+}
+
 /*# sourceMappingURL=style.css.map */
