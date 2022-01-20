@@ -26,3 +26,5 @@ Route::get('/post/donate', [App\Http\Controllers\PostController::class, 'donate'
 //Route::get('/post/create', 'PostController@create' )->name('post.create');
 Route::post('/post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
 Route::post('/post/store1', [App\Http\Controllers\PostController::class, 'store1'])->name('post.store1');
+Route::get('/post/contact', [App\Http\Controllers\PostController::class, 'contact'])->name('post.contact');
+Route::get('/post/about', [App\Http\Controllers\PostController::class, 'about'])->name('post.about');

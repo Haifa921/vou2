@@ -80,4 +80,12 @@ class PostController extends Controller
         return redirect('donates');
         
         }
+        public function contact()
+    {
+        return view('contact');
+    }
+    public function about()
+    {
+        return view('about');
+    }
 }

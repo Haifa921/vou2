@@ -75,9 +75,10 @@
 							<li class="active">
 								<a href="index.html">الرئيسية</a>
 							</li>
-                            <li><a href="">من نحن</a></li>
+                            <li><a href="{{ route('post.about') }}">من نحن</a></li>
 							
-							<li><a href="">تواصل معنا</a></li>
+							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
+							
 							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
                        
         @if (Route::has('login'))
