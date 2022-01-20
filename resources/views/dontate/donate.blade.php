@@ -115,6 +115,7 @@
 				<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
 			<option value="ملابس شتوية"> ملابس شتوية</option>
 			<option value="جهاز تدفئة">جهاز تدفئة</option>
+			<option value="عمليات ">  <a href="home.php"> عمليات</a></option>
 			<option value="طرد صحي">طرد صحي </option>
 			<option value="طرد غذائي"> طرد غذائي</option>
 			<option value="ذكاة مال"> ذكاة مال </option>
