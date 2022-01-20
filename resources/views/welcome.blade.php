@@ -98,7 +98,7 @@
             @endif
 				</div>
 			</div>
-		</header>
+	</header>
 		
        
 

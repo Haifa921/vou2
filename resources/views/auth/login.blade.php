@@ -73,46 +73,43 @@
                         <div class="card-header text-center">
                             <h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
                         </div>  
-    <form method="POST" class="w-100" action="{{ route('login') }}">
+                <form method="POST" class="w-100" action="{{ route('login') }}">
             @csrf
             
-        <div class="container-fluid pt-5">
-            
-            <div class="form-group">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email"  class="form-control mr-4 w-100" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-            <div class="form-group">    
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="form-control mr-4 w-100" type="password" name="password" required autocomplete="current-password" />
-            </div>
-            </div>
+                <div class="container-fluid pt-5">
+                    
+                        <div class="form-group">
+                            <x-jet-label for="email" value="{{ __('Email') }}" />
+                            <x-jet-input id="email"  class="form-control mr-4 w-100" type="email" name="email" :value="old('email')" required autofocus />
+                        </div>
+                        <div class="form-group">    
+                            <div class="mt-4">
+                                <x-jet-label for="password" value="{{ __('Password') }}" />
+                                <x-jet-input id="password" class="form-control mr-4 w-100" type="password" name="password" required autocomplete="current-password" />
+                            </div>
+                        </div>
+                    <div class="block mt-4">
+                        <label for="remember_me" class="flex items-center">
+                            <x-jet-checkbox id="remember_me" name="remember" />
+                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                        </label>
+                </div>
+                    <div > <a class=""  href="http://127.0.0.1:8000/register"   > متطوع جديد؟</a></div>
+                    <div> <a  href="http://127.0.0.1:8000/register"   > خدمات غير المتطوعين</a></div>
+                    <div class="flex items-center justify-end mt-4">
+                        @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                {{ __('نسيت كلمة المرور؟') }}
+                            </a>
+                        @endif
+                    <div class="flex items-center justify-end mt-4 text-center">
 
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-               <div > <a class=""  href="http://127.0.0.1:8000/register"   > متطوع جديد؟</a></div>
-               <div> <a  href="http://127.0.0.1:8000/register"   > خدمات غير المتطوعين</a></div>
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('نسيت كلمة المرور؟') }}
-                    </a>
-                @endif
-</div>
-                <div class="flex items-center justify-end mt-4 text-center">
-
-                <x-jet-button class="btn btn-secondary ">
-                    {{ __('تسجيل الدخول') }}
-                </x-jet-button>
-            </div>
-        </div>
-    </form>
+                        <x-jet-button class="btn btn-secondary ">
+                            {{ __('تسجيل الدخول') }}
+                        </x-jet-button>
+                    </div>
+                </div>
+                </form>
 </div>
     </div> 
         </div>
