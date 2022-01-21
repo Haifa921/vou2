@@ -125,7 +125,7 @@
 
             <div class="form-group">
 
-            <a href="http://127.0.0.1:8000/posts">  <button class="btn btn-danger" type="submit">اكفل يتيم</button></a>
+            <a href="">  <button class="btn btn-danger" type="submit">اكفل يتيم</button></a>
             
             </div>
 

@@ -96,6 +96,24 @@
    
 
 <div class="container-fluid pt-5">
+	<div>
+	<a href="http://127.0.0.1:8000/post/surgery"> للتبرع للعمليات وعلاج الامراض</a>
+	</div>
+			</br>
+<div class="form-group">
+
+				<label for="exampleFormControlInput1"  >نوع التبرع  </label>
+				<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
+			<option value="ملابس شتوية"> ملابس شتوية</option>
+			<option value="جهاز تدفئة">جهاز تدفئة</option>
+			<option value="طرد صحي">طرد صحي </option>
+			<option value="طرد غذائي"> طرد غذائي</option>
+			<option value="ذكاة مال"> ذكاة مال </option>
+			<option value="سلة غذائية"> سلة غذائية</option>
+			<option value="صدقات"> صدقات </option>
+			<option value="اطعام مسكين"> اطعام مسكين</option>
+			</select>
+		</div>
 			<div class="form-group">
 				<label for="exampleFormControlInput1">الاسم   </label>
 				<input type="text" name="name"  class="form-control mr-4 w-100"   >
@@ -110,20 +128,7 @@
 			<label for="exampleFormControlInput1">الايميل  </label>
 			<input type="email" name="email"  class="form-control mr-4 w-100"   >
 			</div>
-		<div class="form-group">
-				<label for="exampleFormControlInput1"  >نوع التبرع  </label>
-				<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
-			<option value="ملابس شتوية"> ملابس شتوية</option>
-			<option value="جهاز تدفئة">جهاز تدفئة</option>
-			<option value="عمليات ">  <a href="home.php"> عمليات</a></option>
-			<option value="طرد صحي">طرد صحي </option>
-			<option value="طرد غذائي"> طرد غذائي</option>
-			<option value="ذكاة مال"> ذكاة مال </option>
-			<option value="سلة غذائية"> سلة غذائية</option>
-			<option value="صدقات"> صدقات </option>
-			<option value="اطعام مسكين"> اطعام مسكين</option>
-			</select>
-		</div>
+		
 			<div class="form-group">
 			<label for="exampleFormControlInput1">كمية التبرع  </label>
 			<input type="text" name="amount"  class="form-control mr-4 w-100"   >

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\post;
 use App\Models\donate;
+use App\Models\surgery;
 class PostController extends Controller
 {
     public function index(){
@@ -53,11 +54,11 @@ class PostController extends Controller
     $post['amount'] = $request->input('amount');
     $post['branch'] = $request->input('branch');
     $post['id_num'] = $request->input('id_num');
-    $post['date'] = $request->input('date');
+   
 
     $post->save();
     
-    return redirect('posts');
+    return redirect('post/create');
     
     }
     public function donate()
@@ -77,15 +78,33 @@ class PostController extends Controller
     
         $post->save();
         
-        return redirect('donates');
+        return redirect('post/donate');
         
         }
+
         public function contact()
     {
         return view('contact');
     }
+
     public function about()
     {
         return view('about');
     }
+    public function store2(Request $request){
+        $post = new surgery();
+        $post['id_credit'] = $request->input('id_credit');
+        $post['name'] = $request->input('name');
+        $post['phone'] = $request->input('phone');
+       
+        $post['email'] = $request->input('email');
+       
+        $post['amount'] = $request->input('amount');
+        
+    
+        $post->save();
+        
+        return redirect('post/surgery');
+        
+        }
 }

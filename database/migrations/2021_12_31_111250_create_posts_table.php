@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('amount');
             $table->string('branch');
             $table->string('id_num');
-            $table->string('date');
+            
             $table->timestamps();
         });
     }
