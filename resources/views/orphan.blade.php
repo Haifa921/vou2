@@ -61,10 +61,66 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<style>
+		 .card 	{
+			 flex-direction:column; 
+			 width: 424px;
+			 margin:auto;
+			 border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem
+				}
+				.form-control {
+    		display: block;
+    		 width: 100%; 
+}
+	</style>
 	</head>
 	<body>
+	<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li class="active">
+								<a href="index.html">الرئيسية</a>
+							</li>
+                            <li><a href="">من نحن</a></li>
+							
+							<li><a href="">تواصل معنا</a></li>
+							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
+                       
+        @if (Route::has('login'))
+                <li>
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                    @else
+                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
+                      
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
+                        @endif
+                    @endauth
+							
+						</ul>
+					</nav>
+                  
+            @endif
+				</div>
+			</div>
+	</header> 
+	<div class="fh5co-hero">
+					<div class="fh5co-overlay"></div>
+						<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
+							<div class="desc animate-box">
+								<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
+									
+							</div>
+						</div>
 
+	</div> 
     <div class="row">
 
         @if (count($errors) > 0)
@@ -78,61 +134,75 @@
         @endif
 
 
-      <div class="col">
-      <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
-        @csrf
-           
-        <div class="form-group">
-              <label for="exampleFormControlInput1">الاسم بالعربي  </label>
-              <input type="text" name="arabic" class="form-control"   >
-            </div>
+			<div class="col">
+				
+				<div class="container-fluid pt-5 pb-3">
+					
+					<div class="row justify-content-center mt-5">
+						
+							<div class="col-md-6">
+								<div class="card">
+										<div class="card-header text-center">
+											<h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
+										</div>
+											<form action="{{route('post.store')}}" class="w-100" method="POST" enctype="multipart/form-data">
+													@csrf
+												<div class="container-fluid pt-5">    
+																	<div class="form-group">
+																		<label for="exampleFormControlInput1">الاسم بالعربي  </label>
+																		<input type="text" name="arabic" class="form-control mr-4 w-100">
+																	</div>
+																	<div class="form-group">
+																		<label for="exampleFormControlInput1">الاسم بالانكليزي  </label>
+																		<input type="text" name="english" class="form-control mr-4 w-100"   >
+																	</div>
+																	<div class="form-group">
+																			<label for="exampleFormControlInput1">رقم الموبايل  </label>
+																			<input type="text" name="phone" class="form-control  mr-4 w-100"   >
+																	</div>
+																	<div class="form-group">
+																		<label for="exampleFormControlInput1">الايميل  </label>
+																		<input type="email" name="email" class="form-control mr-4 w-100"   >
+																	</div>
+																	<div class="form-group">
+																						<label for="exampleFormControlInput1">نوع الكفالة  </label>
+																			<select name="orphan_type" id="cars">
+																				<option value="كفالة يتيم">كفالة يتيم</option>
+																				<option value="طالب علم">طالب علم</option>
+																				<option value="كفالة اسرة">كفالة اسرة</option>
+																				<option value="ذوي احتياجات">ذوي احتياجات</option>
+																			</select>
+																	</div>
+															<div class="form-group">
+																		<label for="exampleFormControlInput1">كمية التبرع  </label>
+																		<input type="text" name="amount" class="form-control mr-4 w-100"   >
+															</div>
+															<div class="form-group">
+																		<label for="exampleFormControlInput1">الفرع  </label>
+																		<input type="text" name="branch" class="form-control mr-4 w-100"   >
+															</div>
+															<div class="form-group">
 
-        <div class="form-group">
-              <label for="exampleFormControlInput1">الاسم بالانكليزي  </label>
-              <input type="text" name="english" class="form-control"   >
-            </div>
-           
-            <div class="form-group">
-              <label for="exampleFormControlInput1">رقم الموبايل  </label>
-              <input type="text" name="phone" class="form-control"   >
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">الايميل  </label>
-              <input type="email" name="email" class="form-control"   >
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">نوع الكفالة  </label>
+																		<label for="exampleFormControlInput1">رقم البطاقة  </label>
+																		<input type="text" name="id_num" class="form-control mr-4 w-100"   >
+															</div>
+																
 
-			  <select name="orphan_type" id="cars">
-    <option value="كفالة يتيم">كفالة يتيم</option>
-    <option value="طالب علم">طالب علم</option>
-    <option value="كفالة اسرة">كفالة اسرة</option>
-    <option value="ذوي احتياجات">ذوي احتياجات</option>
-  </select>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">كمية التبرع  </label>
-              <input type="text" name="amount" class="form-control"   >
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">الفرع  </label>
-              <input type="text" name="branch" class="form-control"   >
-            </div>
-			<label for="exampleFormControlInput1">رقم البطاقة  </label>
-              <input type="text" name="id_num" class="form-control"   >
-            </div>
-			
+															<div class="flex items-center justify-end mt-4 text-center">
 
-            <div class="form-group">
-
-            <a href="">  <button class="btn btn-danger" type="submit">اكفل يتيم</button></a>
-            
-            </div>
-
-          </form>
-      </div>
-    </div>
-  </div>
+																	<a href="">  <button class="btn btn-danger" type="submit">اكفل يتيم</button></a>
+																
+																</div>
+												</div>
+											</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
 
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

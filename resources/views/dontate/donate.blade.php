@@ -69,7 +69,7 @@
 	</style>
 </head>
 <body>
-<header id="fh5co-header-section" class="sticky-banner">
+	<header id="fh5co-header-section" class="sticky-banner">
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
@@ -130,71 +130,66 @@
 
 
 <div class="col">
-<div class="container-fluid pt-5 pb-3">
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-6">
+	<div class="container-fluid pt-5 pb-3">
+   		<div class="row justify-content-center mt-5">
+      		  <div class="col-md-6">
+        		    <div class="card">
+							<div class="card-header text-center">
+								<h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
+							</div>
+							<form action="{{route('post.store1')}}" class="w-100" method="POST" enctype="multipart/form-data">
+									@csrf
+									<div class="container-fluid pt-5">
+										<div>
+											<a href="http://127.0.0.1:8000/post/surgery"> للتبرع للعمليات وعلاج الامراض</a>
+										</div>
+											</br>
+												<div class="form-group">
+
+														<label for="exampleFormControlInput1"  >نوع التبرع  </label>
+														<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
+													<option value="ملابس شتوية"> ملابس شتوية</option>
+													<option value="جهاز تدفئة">جهاز تدفئة</option>
+													<option value="طرد صحي">طرد صحي </option>
+													<option value="طرد غذائي"> طرد غذائي</option>
+													<option value="ذكاة مال"> ذكاة مال </option>
+													<option value="سلة غذائية"> سلة غذائية</option>
+													<option value="صدقات"> صدقات </option>
+													<option value="اطعام مسكين"> اطعام مسكين</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="exampleFormControlInput1">الاسم   </label>
+													<input type="text" name="name"  class="form-control mr-4 w-100"   >
+												</div>
+
+												<div class="form-group">
+															<label for="exampleFormControlInput1">رقم الموبايل  </label>
+															<input type="text" name="phone"  class="form-control mr-4 w-100"   >
+												</div>
+
+												<div class="form-group">
+													<label for="exampleFormControlInput1">الايميل  </label>
+													<input type="email" name="email"  class="form-control mr-4 w-100"   >
+												</div>
 			
-            <div class="card">
-			<div class="card-header text-center">
-                            <h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
-            </div>
-<form action="{{route('post.store1')}}" class="w-100" method="POST" enctype="multipart/form-data">
-@csrf
-   
-
-<div class="container-fluid pt-5">
-	<div>
-	<a href="http://127.0.0.1:8000/post/surgery"> للتبرع للعمليات وعلاج الامراض</a>
-	</div>
-			</br>
-<div class="form-group">
-
-				<label for="exampleFormControlInput1"  >نوع التبرع  </label>
-				<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
-			<option value="ملابس شتوية"> ملابس شتوية</option>
-			<option value="جهاز تدفئة">جهاز تدفئة</option>
-			<option value="طرد صحي">طرد صحي </option>
-			<option value="طرد غذائي"> طرد غذائي</option>
-			<option value="ذكاة مال"> ذكاة مال </option>
-			<option value="سلة غذائية"> سلة غذائية</option>
-			<option value="صدقات"> صدقات </option>
-			<option value="اطعام مسكين"> اطعام مسكين</option>
-			</select>
-		</div>
-			<div class="form-group">
-				<label for="exampleFormControlInput1">الاسم   </label>
-				<input type="text" name="name"  class="form-control mr-4 w-100"   >
-			</div>
-
-			<div class="form-group">
-			<label for="exampleFormControlInput1">رقم الموبايل  </label>
-			<input type="text" name="phone"  class="form-control mr-4 w-100"   >
-			</div>
-
-			<div class="form-group">
-			<label for="exampleFormControlInput1">الايميل  </label>
-			<input type="email" name="email"  class="form-control mr-4 w-100"   >
-			</div>
+												<div class="form-group">
+													<label for="exampleFormControlInput1">كمية التبرع  </label>
+													<input type="text" name="amount"  class="form-control mr-4 w-100"   >
+												</div>
 		
-			<div class="form-group">
-			<label for="exampleFormControlInput1">كمية التبرع  </label>
-			<input type="text" name="amount"  class="form-control mr-4 w-100"   >
-			</div>
-	
-	
+											<div class="flex items-center justify-end mt-4 text-center">
 
-			<div class="flex items-center justify-end mt-4 text-center">
+												<a href="">  <button class="btn btn-secondary" type="submit" style="margin: 15px;"> تبرع</button></a>
+											</div>
+									</div>
 
-			<a href="">  <button class="btn btn-secondary" type="submit" style="margin: 15px;"> تبرع</button></a>
+							</form>
+					</div>
+				</div>
 			</div>
-			</div>
-
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
+		</div>
+	</div>
 </div>
 </div>
 </div>
