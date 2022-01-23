@@ -36,7 +36,7 @@
 							
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
-							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
+							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
                        
         @if (Route::has('login'))
                 <li>

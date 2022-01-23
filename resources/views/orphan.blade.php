@@ -90,7 +90,7 @@
                             <li><a href="">من نحن</a></li>
 							
 							<li><a href="">تواصل معنا</a></li>
-							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
+							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
                        
         @if (Route::has('login'))
                 <li>
@@ -111,16 +111,7 @@
 				</div>
 			</div>
 	</header> 
-	<div class="fh5co-hero">
-					<div class="fh5co-overlay"></div>
-						<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
-							<div class="desc animate-box">
-								<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
-									
-							</div>
-						</div>
-
-	</div> 
+	
     <div class="row">
 
         @if (count($errors) > 0)

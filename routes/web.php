@@ -21,7 +21,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts');
-Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create'])->name('post.create');
+Route::get('/post/create1', [App\Http\Controllers\PostController::class, 'create1'])->name('post.create1');
 Route::get('/post/donate', [App\Http\Controllers\PostController::class, 'donate'])->name('post.donate');
 Route::get('/post/surgery', [App\Http\Controllers\ControllerSurgery::class, 'surgery'])->name('post.surgery');
 //Route::get('/post/create', 'PostController@create' )->name('post.create');
