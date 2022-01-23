@@ -76,7 +76,7 @@
                 <form method="POST" class="w-100" action="{{ route('login') }}">
             @csrf
             
-                <div class="container-fluid pt-5">
+            <div class="container-fluid pt-5">
                     
                         <div class="form-group">
                             <x-jet-label for="email" value="{{ __('Email') }}" />
@@ -93,7 +93,7 @@
                             <x-jet-checkbox id="remember_me" name="remember" />
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
-                </div>
+            </div>
                     <div > <a class=""  href="http://127.0.0.1:8000/register"   > متطوع جديد؟</a></div>
                     <div> <a  href="http://127.0.0.1:8000/register"   > خدمات غير المتطوعين</a></div>
                     <div class="flex items-center justify-end mt-4">
@@ -102,13 +102,14 @@
                                 {{ __('نسيت كلمة المرور؟') }}
                             </a>
                         @endif
+                    </div>
                     <div class="flex items-center justify-end mt-4 text-center">
 
                         <x-jet-button class="btn btn-secondary ">
                             {{ __('تسجيل الدخول') }}
                         </x-jet-button>
                     </div>
-                </div>
+            </div>
                 </form>
 </div>
     </div> 

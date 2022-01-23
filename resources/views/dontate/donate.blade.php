@@ -64,12 +64,59 @@
 		 .card 	{
 			 flex-direction:column; 
 			 width: 424px;
+			 margin:auto;
 				}
 	</style>
 </head>
 <body>
+<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li class="active">
+								<a href="index.html">الرئيسية</a>
+							</li>
+                            <li><a href="">من نحن</a></li>
+							
+							<li><a href="">تواصل معنا</a></li>
+							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
+                       
+        @if (Route::has('login'))
+                <li>
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                    @else
+                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
+                      
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
+                        @endif
+                    @endauth
+							
+						</ul>
+					</nav>
+                  
+            @endif
+				</div>
+			</div>
+	</header> 
+	
+	<div class="fh5co-hero">
+							<div class="fh5co-overlay"></div>
+							<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
+								<div class="desc animate-box">
+									<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
+									
+								</div>
+							</div>
+
+	</div> 
  
-<div class="row">
+		<div class="row">
 
 	@if (count($errors) > 0)
 	<ul>
