@@ -73,12 +73,12 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active">
-								<a href="index.html">الرئيسية</a>
+								<a href="http://127.0.0.1:8000/">الرئيسية</a>
 							</li>
                             <li><a href="{{ route('post.about') }}">من نحن</a></li>
 							
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
-							
+
 							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
                        
         @if (Route::has('login'))

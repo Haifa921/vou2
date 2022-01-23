@@ -64,59 +64,12 @@
 		 .card 	{
 			 flex-direction:column; 
 			 width: 424px;
-			 margin:auto;
 				}
 	</style>
 </head>
 <body>
-<header id="fh5co-header-section" class="sticky-banner">
-			<div class="container">
-				<div class="nav-header">
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
-					<!-- START #fh5co-menu-wrap -->
-					<nav id="fh5co-menu-wrap" role="navigation">
-						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active">
-								<a href="index.html">الرئيسية</a>
-							</li>
-                            <li><a href="">من نحن</a></li>
-							
-							<li><a href="">تواصل معنا</a></li>
-							<li><a class="active" href="{{ route('post.create') }}">اكفل يتيم</a></li>
-                       
-        @if (Route::has('login'))
-                <li>
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-                      
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
-                        @endif
-                    @endauth
-							
-						</ul>
-					</nav>
-                  
-            @endif
-				</div>
-			</div>
-	</header> 
-	
-	<div class="fh5co-hero">
-							<div class="fh5co-overlay"></div>
-							<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
-								<div class="desc animate-box">
-									<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
-									
-								</div>
-							</div>
-
-	</div> 
  
-		<div class="row">
+<div class="row">
 
 	@if (count($errors) > 0)
 	<ul>
@@ -136,31 +89,24 @@
 			
             <div class="card">
 			<div class="card-header text-center">
-                            <h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
+                            <h1 class="H1-color" style="color=#ffffff"> متبرع </h1>
             </div>
-<form action="{{route('post.store1')}}" class="w-100" method="POST" enctype="multipart/form-data">
+<form action="{{route('post.store2')}}" class="w-100" method="POST" enctype="multipart/form-data">
 @csrf
    
 
 <div class="container-fluid pt-5">
-	<div>
-	<a href="http://127.0.0.1:8000/post/surgery"> للتبرع للعمليات وعلاج الامراض</a>
-	</div>
-			</br>
 <div class="form-group">
-
-				<label for="exampleFormControlInput1"  >نوع التبرع  </label>
-				<select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
-			<option value="ملابس شتوية"> ملابس شتوية</option>
-			<option value="جهاز تدفئة">جهاز تدفئة</option>
-			<option value="طرد صحي">طرد صحي </option>
-			<option value="طرد غذائي"> طرد غذائي</option>
-			<option value="ذكاة مال"> ذكاة مال </option>
-			<option value="سلة غذائية"> سلة غذائية</option>
-			<option value="صدقات"> صدقات </option>
-			<option value="اطعام مسكين"> اطعام مسكين</option>
+<label for="exampleFormControlInput1"  >قيمة كل عملية </label>
+				<select name="amount" id="cars" class="form-select" aria-label="Disabled select example" >
+			<option value=" زراعة كبد">  زراعة كبد-2000</option>
+			<option value=" جراحة ">جراحة سرطان-3000</option>
+			<option value=" قلب"> جراحة قلب-9000 </option>
+			<option value="دعم ">  دعم نفسي -1000</option>
+			
 			</select>
-		</div>
+</div>
+	
 			<div class="form-group">
 				<label for="exampleFormControlInput1">الاسم   </label>
 				<input type="text" name="name"  class="form-control mr-4 w-100"   >
@@ -170,18 +116,16 @@
 			<label for="exampleFormControlInput1">رقم الموبايل  </label>
 			<input type="text" name="phone"  class="form-control mr-4 w-100"   >
 			</div>
-
+            
 			<div class="form-group">
 			<label for="exampleFormControlInput1">الايميل  </label>
 			<input type="email" name="email"  class="form-control mr-4 w-100"   >
 			</div>
-		
-			<div class="form-group">
-			<label for="exampleFormControlInput1">كمية التبرع  </label>
-			<input type="text" name="amount"  class="form-control mr-4 w-100"   >
+           
+            <div class="form-group">
+			<label for="exampleFormControlInput1">رقم البطاقة </label>
+			<input type="text" name="id_credit"  class="form-control mr-4 w-100"   >
 			</div>
-	
-	
 
 			<div class="flex items-center justify-end mt-4 text-center">
 

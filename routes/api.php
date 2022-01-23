@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ApiPostController;
 use App\Http\Controllers\ApiDonateController;
+use App\Http\Controllers\ControllerSurgery;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,7 @@ Route::get('/posts/{id}', [ApiPostController::class,'show']);
 Route::post('/postd', [ApiDonateController::class,'store']);
 Route::get('/postsd', [ApiDonateController::class,'index']);
 Route::get('/postsd/{id}', [ApiDonateController::class,'show']);
+
+Route::post('/surgerysave', [ControllerSurgery::class,'store']);
+Route::get('/surgeryall', [ControllerSurgery::class,'index']);
+Route::get('/surgeryshow/{id}', [ControllerSurgery::class,'show']);
