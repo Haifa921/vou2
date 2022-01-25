@@ -58,7 +58,7 @@ class PostController extends Controller
 
     $post->save();
     
-    return redirect('post/create');
+    return redirect('post/create1');
     
     }
     public function donate()
