@@ -69,10 +69,15 @@
 			 border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem
 				}
-				.form-control {
+				.form-control 
+				{
     		display: block;
     		 width: 100%; 
-}
+				}
+				.H1-color 
+				{
+    margin: unset;
+				}
 	</style>
 	</head>
 	<body>
@@ -123,18 +128,16 @@
             @endforeach
         </ul>
         @endif
-
-
-			<div class="col">
+			<div class="col" >
 				
 				<div class="container-fluid pt-5 pb-3">
 					
-					<div class="row justify-content-center mt-5">
+					<div class="row justify-content-center mt-5" >
 						
 							<div class="col-md-6">
 								<div class="card">
 										<div class="card-header text-center">
-											<h1 class="H1-color" style="color=#ffffff"> متطوع </h1>
+											<h1 class="H1-color" style="color=#ffffff"> تكفل الان </h1>
 										</div>
 											<form action="{{route('post.store')}}" class="w-100" method="POST" enctype="multipart/form-data">
 													@csrf
