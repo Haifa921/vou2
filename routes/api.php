@@ -37,3 +37,7 @@ Route::get('/postsd/{id}', [ApiDonateController::class,'show']);
 Route::post('/surgerysave', [ControllerSurgery::class,'store']);
 Route::get('/surgeryall', [ControllerSurgery::class,'index']);
 Route::get('/surgeryshow/{id}', [ControllerSurgery::class,'show']);
+
+Route::post('/volu1save', [ControllerSurgery::class,'store1']);
+Route::get('/volu1all', [ControllerSurgery::class,'index1']);
+Route::get('/volu1show/{id}', [ControllerSurgery::class,'show1']);

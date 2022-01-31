@@ -59,7 +59,7 @@ class AuthController extends Controller
             'message' => 'تم تسجيل الدخول بنجاح',
              'token' => $tokenResult,
              'data:{',
-            'id' => $user->id, 'name' => $user->name,'email' => $user->email
+            'id' => $user->id, 'name' => $user->name,'email' => $user->email,'is_admin' => $user->is_admin
         ]);
     }
 

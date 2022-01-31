@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\post;
 use App\Models\donate;
 use App\Models\surgery;
+use App\Models\volu1;
 class PostController extends Controller
 {
     public function index(){
@@ -107,4 +108,18 @@ class PostController extends Controller
         return redirect('post/surgery');
         
         }
+        public function store3(Request $request){
+            $post = new volu1();
+            $post['type'] = $request->input('type');
+            $post['name'] = $request->input('name');
+            $post['phone'] = $request->input('phone');
+           
+           
+            
+        
+            $post->save();
+            
+            return redirect('post/volu1');
+            
+            }
 }
