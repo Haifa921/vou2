@@ -94,8 +94,9 @@
  
 
 <div class="container-fluid pt-5">
+<a href="http://127.0.0.1:8000/post/new">    ادخال عملية تبرع جديدة</a>
 <div class="form-group">
-<label for="exampleFormControlInput1"  >قيمة كل عملية </label>
+<label for="exampleFormControlInput1"  >اختيار عمل تطوعي</label>
       <select name="type" id="cars" class="form-select" aria-label="Disabled select example" >
     <option value=" توزيع بطانيات ">  توزيع بطانيات</option>
     <option value=" توزيع طرود صحية "> توزيع طرود صحية</option>

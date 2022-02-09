@@ -21,6 +21,10 @@ class PostController extends Controller
     {
         return view('orphan');
     }
+    public function newdonate()
+    {
+        return view('dontate.newdonate');
+    }
 
     public function store(Request $request){
       
