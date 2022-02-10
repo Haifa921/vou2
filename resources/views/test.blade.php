@@ -188,3 +188,105 @@ $(window).load(function () {
 
 
 
+newdonare
+@if (count($errors) > 0)
+        <ul>
+            @foreach ($errors->all() as $item)
+                <li>
+                    {{$item}}
+                </li>
+            @endforeach
+        </ul>
+        @endif
+
+
+      <div class="col">
+      <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+           
+
+        <div class="form-group">
+              <label for="exampleFormControlInput1">Title  </label>
+              <input type="text" name="title" class="form-control"   >
+            </div>
+           
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">content  </label>
+              <textarea class="form-control"  name="content"   rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Photo  </label>
+                <input type="file"  name="photo" class="form-control"   >
+              </div>
+
+            <div class="form-group">
+
+                <button class="btn btn-danger" type="submit">save</button>
+            </div>
+
+          </form>
+      </div>
+
+
+
+      <form action="{{route('post.store')}}" class="w-100" method="POST" enctype="multipart/form-data">
+@csrf
+          <div class="row"><div class="col">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col"> phone</th>
+                    <th scope="col">User</th>
+                    <th scope="col">content</th>
+                    <th scope="col">address</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <th scope="row"></th>
+                    <td>	<div class="form-group">
+				<label for="exampleFormControlInput1">الاسم   </label>
+				<input type="text" name="name"  class="form-control mr-4 w-100"   >
+			</div></td>
+                    <td>	<div class="form-group">
+				<label for="exampleFormControlInput1">الاسم   </label>
+				<input type="text" name="phone"  class="form-control mr-4 w-100"   >
+			</div></td>
+                    
+                    
+                    <td>	<div class="form-group">
+				<label for="exampleFormControlInput1">الاسم   </label>
+				<input type="text" name="content"  class="form-control mr-4 w-100"   >
+			</div></td>
+                    <td>	<div class="form-group">
+				<label for="exampleFormControlInput1">الاسم   </label>
+				<input type="text" name="address"  class="form-control mr-4 w-100"   >
+			</div></td>
+                   <td>
+                   <div class="flex items-center justify-end mt-4 text-center">
+
+<a href="">  <button class="btn btn-secondary" type="submit" style="margin: 15px;"> تبرع</button></a>
+</div>
+                   </td>
+                  </tr>
+                  
+
+                </tbody>
+              </table>
+
+
+            </div>
+           
+
+            
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+            </form>
+   
