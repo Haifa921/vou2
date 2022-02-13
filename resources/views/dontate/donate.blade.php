@@ -9,12 +9,12 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-  <!-- 
+  <!--
 	//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE 
+	FREE HTML5 TEMPLATE
 	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
+
 	Website: 		http://freehtml5.co/
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
@@ -36,12 +36,12 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> 
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
-       
+
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -62,7 +62,7 @@
 	<![endif]-->
 	<style>
 		 .card 	{
-			 flex-direction:column; 
+			 flex-direction:column;
 			 width: 424px;
 			 margin:auto;
 				}
@@ -81,41 +81,41 @@
 								<a href="index.html">الرئيسية</a>
 							</li>
                             <li><a href="">من نحن</a></li>
-							
+
 							<li><a href="">تواصل معنا</a></li>
 							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
-                       
+
         @if (Route::has('login'))
                 <li>
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-                      
+
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
                         @endif
                     @endauth
-							
+
 						</ul>
 					</nav>
-                  
+
             @endif
 				</div>
 			</div>
-	</header> 
-	
+	</header>
+
 	<div class="fh5co-hero">
 							<div class="fh5co-overlay"></div>
 							<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
 								<div class="desc animate-box">
 									<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
-									
+
 								</div>
 							</div>
 
-	</div> 
- 
+	</div>
+
 		<div class="row">
 
 	@if (count($errors) > 0)
@@ -140,6 +140,10 @@
 							<form action="{{route('post.store1')}}" class="w-100" method="POST" enctype="multipart/form-data">
 									@csrf
 									<div class="container-fluid pt-5">
+{{--                                        هون بتحط يلي تحت مشان تنعرض الرسالة--}}
+                                        @if(Session::has('message'))
+                                            <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                        @endif
 										<div>
 											<a href="http://127.0.0.1:8000/post/surgery"> للتبرع للعمليات وعلاج الامراض</a>
 										</div>
@@ -172,12 +176,12 @@
 													<label for="exampleFormControlInput1">الايميل  </label>
 													<input type="email" name="email"  class="form-control mr-4 w-100"   >
 												</div>
-			
+
 												<div class="form-group">
 													<label for="exampleFormControlInput1">كمية التبرع  </label>
 													<input type="text" name="amount"  class="form-control mr-4 w-100"   >
 												</div>
-		
+
 											<div class="flex items-center justify-end mt-4 text-center">
 
 												<a href="">  <button class="btn btn-secondary" type="submit" style="margin: 15px;"> تبرع</button></a>

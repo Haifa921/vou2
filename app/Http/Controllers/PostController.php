@@ -7,16 +7,18 @@ use App\Models\post;
 use App\Models\donate;
 use App\Models\surgery;
 use App\Models\volu1;
+use Illuminate\Support\Facades\Session;
+
 class PostController extends Controller
 {
     public function index(){
        // $posts=Post::paginate(10);
         //return PostResource::collection($posts);
         $posts = post::orderBy('created_at', 'DESC')->get();
-      
+
         return view('index')->with('posts', $posts);
     }
-     
+
     public function create1()
     {
         return view('orphan');
@@ -27,7 +29,7 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
-      
+
      /* $this->validate($request, [
       'arabic' => 'required',
       'english' =>'required',
@@ -38,7 +40,7 @@ class PostController extends Controller
       'branch' => 'required'  ]);
 
       $post = post::create([
-        
+
         'arabic' =>  $request->arabic,
         'english' =>   $request->english,
         'phone' =>   $request->phone,
@@ -46,25 +48,25 @@ class PostController extends Controller
         'orphan_type' =>   $request->orphan_type,
         'amount' =>   $request->amount,
         'branch' =>   $request->branch,
-       
-        
+
+
     ]); */
     $post = new Post();
     $post['arabic'] = $request->input('arabic');
     $post['english'] = $request->input('english');
     $post['phone'] = $request->input('phone');
-   
+
     $post['email'] = $request->input('email');
     $post['orphan_type'] = $request->input('orphan_type');
     $post['amount'] = $request->input('amount');
     $post['branch'] = $request->input('branch');
     $post['id_num'] = $request->input('id_num');
-   
+
 
     $post->save();
-    
+
     return redirect('post/create1');
-    
+
     }
     public function donate()
     {
@@ -75,16 +77,17 @@ class PostController extends Controller
         $post['type'] = $request->input('type');
         $post['name'] = $request->input('name');
         $post['phone'] = $request->input('phone');
-       
+
         $post['email'] = $request->input('email');
-       
+
         $post['amount'] = $request->input('amount');
-        
-    
+
+
         $post->save();
-        
+        // بتحط عند فانكشن الحفظ قبل مايعمل ريترن بتحط يلي تحت مع الرسالة يلي بدك ياها بعدين بتروح عالصفحة الاتش تي ام ال
+        Session::flash('message', 'تم التطوع بنجاح');
         return redirect('post/donate');
-        
+
         }
 
         public function contact()
@@ -101,29 +104,29 @@ class PostController extends Controller
         $post['id_credit'] = $request->input('id_credit');
         $post['name'] = $request->input('name');
         $post['phone'] = $request->input('phone');
-       
+
         $post['email'] = $request->input('email');
-       
+
         $post['amount'] = $request->input('amount');
-        
-    
+
+
         $post->save();
-        
+
         return redirect('post/surgery');
-        
+
         }
         public function store3(Request $request){
             $post = new volu1();
             $post['type'] = $request->input('type');
             $post['name'] = $request->input('name');
             $post['phone'] = $request->input('phone');
-           
-           
-            
-        
+
+
+
+
             $post->save();
-            
+
             return redirect('post/volu1');
-            
+
             }
 }
