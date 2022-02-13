@@ -22,7 +22,6 @@ class postFactory extends Factory
             'amount'=>$this->faker->text(50),
             'branch'=>$this->faker->text(50),
             'id_num'=>$this->faker->text(50),
-            'date'=>$this->faker->text(50),
 
         ];
     }
