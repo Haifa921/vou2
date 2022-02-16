@@ -73,7 +73,7 @@
 <header>
     <div>
 
-                        <nav>
+                        <nav >
                             <ul class="menu">
                                 <li><a class="active" href="{{ url('/home') }}">home</a></li>
                                 <li><a href="{{ url('/posts') }}">addservice</a></li>

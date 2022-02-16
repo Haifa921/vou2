@@ -77,17 +77,22 @@
         <header>
 
 
-            <nav>
-              <ul class="menu">
-                <li><a class="active" href="{{ url('/home') }}">home</a></li>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             <div class="container-fluid">
+
+             <!--  <ul class="menu">-->
+              <!--  <li>-->
+                  <a class="navbar-brand" href="{{ url('/home') }}">home</a>
+               <!-- </li>-->
              
                 @if (Route::has('login'))
                 @auth
-                <li><a href="#" role="button">
+              <!--  <li> -->
+                  <a href="#" role="button">
                     {{ Auth::user()->name }}
-                  </a>
-                </li>
-                <li class="last">
+                   </a>
+               <!-- </li>-->
+              <!--  <li class="last">-->
 
                   <div>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -99,7 +104,7 @@
                       @csrf
                     </form>
                   </div>
-                </li>
+               <!-- </li>-->
                 @else
                 <li><a href="{{ route('login') }}">login</a></li>
                 @if (Route::has('register'))
@@ -108,7 +113,9 @@
                 @endauth
               </ul>
               @endif
-            </nav>
+              </div>
+
+          </nav>
           </div>
         </header>
         <div class="row">
@@ -123,40 +130,54 @@
         @endif
 
 
-      <div class="col">
+        <div class="col">
+	<div class="container-fluid pt-5 pb-3">
+   		<div class="row justify-content-center mt-5">
+      		  <div class="col-md-6">
+        		    <div class="card">
+							<div class="card-header text-center">
+								<h1 class="H1-color" style="color=#ffffff"> اضافة معلومات  </h1>
+							</div>
       <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
-           
+        <div class="container-fluid pt-5">
+
 
         <div class="form-group">
               <label for="exampleFormControlInput1">name  </label>
-              <input type="text" name="name" class="form-control"   >
+              <input type="text" name="name"  class="form-control mr-4 w-100"    >
             </div>
            
             <div class="form-group">
               <label for="exampleFormControlTextarea1">content  </label>
-              <textarea class="form-control"  name="content"   rows="3"></textarea>
+              <textarea class="form-control  mr-4 w-100"  name="content"   rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">phone  </label>
-                <input type="text"  name="phone" class="form-control"   >
+                <input type="text"  name="phone" class="form-control  mr-4 w-100"   >
               </div>
               
 
         <div class="form-group">
               <label for="exampleFormControlInput1">address  </label>
-              <input type="text" name="address" class="form-control"   >
+              <input type="text" name="address" class="form-control mr-4 w-100"   >
             </div>
 
-            <div class="form-group">
+            <div class="flex items-center justify-end mt-4 text-center">
 
-                <button class="btn btn-danger" type="submit">save</button>
+                <button class="btn btn-secondary" type="submit" style="margin: 15px;">save</button>
+            </div>
             </div>
 
           </form>
-      </div>
-
-      </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
 <script src="js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="js/jquery.easing.1.3.js"></script>
