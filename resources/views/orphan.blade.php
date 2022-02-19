@@ -139,9 +139,13 @@
 										<div class="card-header text-center">
 											<h1 class="H1-color" style="color=#ffffff"> تكفل الان </h1>
 										</div>
-											<form action="{{route('post.store')}}" class="w-100" method="POST" enctype="multipart/form-data">
+											<form action="{{route('post.store4')}}" class="w-100" method="POST" enctype="multipart/form-data">
 													@csrf
 												<div class="container-fluid pt-5">    
+												
+                                        @if(Session::has('message'))
+                                            <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                        @endif
 																	<div class="form-group">
 																		<label for="exampleFormControlInput1">الاسم بالعربي  </label>
 																		<input type="text" name="arabic" class="form-control mr-4 w-100">

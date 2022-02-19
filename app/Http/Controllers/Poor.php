@@ -55,6 +55,8 @@ class Poor extends Controller
        
     }
     /*
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                 
      $post = new poor();
        
         $post->phone = $request->phone;

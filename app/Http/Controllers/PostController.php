@@ -28,7 +28,7 @@ class PostController extends Controller
         return view('dontate.newdonate');
     }
 
-    public function store(Request $request){
+    public function store4(Request $request){
 
      /* $this->validate($request, [
       'arabic' => 'required',
@@ -51,7 +51,7 @@ class PostController extends Controller
 
 
     ]); */
-    $post = new Post();
+    $post = new post();
     $post['arabic'] = $request->input('arabic');
     $post['english'] = $request->input('english');
     $post['phone'] = $request->input('phone');
@@ -64,7 +64,8 @@ class PostController extends Controller
 
 
     $post->save();
-
+    Session::flash('message', 'تم التطوع بنجاح');
+    
     return redirect('post/create1');
 
     }
