@@ -87,7 +87,7 @@ class PostController extends Controller
         $post->save();
         // بتحط عند فانكشن الحفظ قبل مايعمل ريترن بتحط يلي تحت مع الرسالة يلي بدك ياها بعدين بتروح عالصفحة الاتش تي ام ال
         Session::flash('message', 'تم التطوع بنجاح');
-        return redirect('post/donate');
+        return redirect('post/submit');
 
         }
 

@@ -41,3 +41,5 @@ Route::get('/surgeryshow/{id}', [ControllerSurgery::class,'show']);
 Route::post('/volu1save', [ControllerSurgery::class,'store1']);
 Route::get('/volu1all', [ControllerSurgery::class,'index1']);
 Route::get('/volu1show/{id}', [ControllerSurgery::class,'show1']);
+
+Route::get('/submit', [payment::class,'submit']);

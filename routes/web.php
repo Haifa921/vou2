@@ -38,3 +38,5 @@ Route::get('/post/destroy/{id}', [App\Http\Controllers\Poor::class, 'destroy'])-
 Route::post('/post/store', [App\Http\Controllers\Poor::class, 'store'])->name('post.store');
 Route::get('/post/store/approve/{post}', [App\Http\Controllers\Poor::class, 'approve'])->name('post.approve');
 Route::get('/posts', [App\Http\Controllers\Poor::class, 'index'])->name('posts');
+Route::get('/post/submit', [App\Http\Controllers\payment::class, 'submit'])->name('post.submit');
+Route::get('/instamojo_redirect', [App\Http\Controllers\payment::class, 'instamojo_redirect']);
