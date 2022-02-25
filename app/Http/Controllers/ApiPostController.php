@@ -23,10 +23,7 @@ class ApiPostController extends Controller
        $post->phone=$request->phone; 
        $post->email=$request->email; 
        $post->orphan_type=$request->orphan_type; 
-       $post->amount=$request->amount; 
-       $post->branch=$request->branch; 
-       $post->id_num=$request->id_num; 
-       $post->date=$request->date;
+       
        if($post->save()) 
        {
            return new postresource($post);

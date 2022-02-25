@@ -90,7 +90,7 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active">
-								<a href="index.html">الرئيسية</a>
+								<a href="http://127.0.0.1:8000/">الرئيسية</a>
 							</li>
                             <li><a href="">من نحن</a></li>
 							
@@ -171,19 +171,7 @@
 																				<option value="ذوي احتياجات">ذوي احتياجات</option>
 																			</select>
 																	</div>
-															<div class="form-group">
-																		<label for="exampleFormControlInput1">كمية التبرع  </label>
-																		<input type="text" name="amount" class="form-control mr-4 w-100"   >
-															</div>
-															<div class="form-group">
-																		<label for="exampleFormControlInput1">الفرع  </label>
-																		<input type="text" name="branch" class="form-control mr-4 w-100"   >
-															</div>
-															<div class="form-group">
-
-																		<label for="exampleFormControlInput1">رقم البطاقة  </label>
-																		<input type="text" name="id_num" class="form-control mr-4 w-100"   >
-															</div>
+														
 																
 
 															<div class="flex items-center justify-end mt-4 text-center">

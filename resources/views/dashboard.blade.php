@@ -169,6 +169,10 @@
 
 
 <div class="container-fluid pt-5">
+  		
+@if(Session::has('message'))
+                                            <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                        @endif
 <a href="http://127.0.0.1:8000/post/new">    ادخال عملية تبرع جديدة</a>
 <div class="form-group">
 <label for="exampleFormControlInput1"  >اختيار عمل تطوعي</label>

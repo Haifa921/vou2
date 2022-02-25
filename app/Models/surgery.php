@@ -9,5 +9,5 @@ class surgery extends Model
 {
     use HasFactory;
     protected $table="surgeries";
-    protected $fillable =['amount','name','phone','email','id_credit'];
+    protected $fillable =['amount','name','phone','email'];
 }

@@ -47,7 +47,7 @@ class ControllerSurgery extends Controller
     public function store(Request $request)
     {
         $post =new surgery();
-        $post->id_credit=$request->id_credit; 
+       
         $post->name=$request->name; 
         $post->phone=$request->phone; 
         $post->email=$request->email; 

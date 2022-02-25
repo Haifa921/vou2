@@ -21,7 +21,7 @@ class CreateSurgeriesTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('id_credit');
+           
             $table->timestamps();
         });
     }

@@ -58,15 +58,15 @@ class PostController extends Controller
 
     $post['email'] = $request->input('email');
     $post['orphan_type'] = $request->input('orphan_type');
-    $post['amount'] = $request->input('amount');
-    $post['branch'] = $request->input('branch');
-    $post['id_num'] = $request->input('id_num');
+   
 
 
     $post->save();
     Session::flash('message', 'تم التطوع بنجاح');
     
-    return redirect('post/create1');
+    //return redirect('post/create1');
+    
+    return redirect('post/submit');
 
     }
     public function donate()
@@ -87,6 +87,7 @@ class PostController extends Controller
         $post->save();
         // بتحط عند فانكشن الحفظ قبل مايعمل ريترن بتحط يلي تحت مع الرسالة يلي بدك ياها بعدين بتروح عالصفحة الاتش تي ام ال
         Session::flash('message', 'تم التطوع بنجاح');
+
         return redirect('post/submit');
 
         }
@@ -102,7 +103,7 @@ class PostController extends Controller
     }
     public function store2(Request $request){
         $post = new surgery();
-        $post['id_credit'] = $request->input('id_credit');
+        
         $post['name'] = $request->input('name');
         $post['phone'] = $request->input('phone');
 
@@ -113,7 +114,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect('post/surgery');
+        return redirect('post/submit');
 
         }
         public function store3(Request $request){
@@ -126,7 +127,9 @@ class PostController extends Controller
 
 
             $post->save();
-
+            
+            // بتحط عند فانكشن الحفظ قبل مايعمل ريترن بتحط يلي تحت مع الرسالة يلي بدك ياها بعدين بتروح عالصفحة الاتش تي ام ال
+            Session::flash('message', 'تم التطوع بنجاح');
             return redirect('post/volu1');
 
             }
