@@ -60,6 +60,7 @@ class ControllerSurgery extends Controller
     }
     public function store1(Request $request)
     {
+        
         $post =new volu1();
         $post->type=$request->type; 
         $post->name=$request->name; 

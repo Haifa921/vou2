@@ -38,6 +38,7 @@ class ApiDonateController extends Controller
     {
         $post =new donate();
         $post->type=$request->type; 
+        $post->name=$request->name; 
     
         $post->phone=$request->phone; 
         $post->email=$request->email; 
