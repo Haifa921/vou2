@@ -42,7 +42,6 @@ class ApiDonateController extends Controller
     
         $post->phone=$request->phone; 
         $post->email=$request->email; 
-        
         $post->amount=$request->amount; 
      
         if($post->save()) 
