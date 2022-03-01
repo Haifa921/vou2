@@ -1,10 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ApiPostController;
-use App\Http\Controllers\ApiDonateController;
-use App\Http\Controllers\ControllerSurgery;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::controller(AuthController::class)->prefix('auth')->group(function () {
+    Route::post('/login', 'login');
+    Route::post('/logout', 'logout')->middleware(['auth:sanctum']);
+    Route::post('/register', 'register')->middleware(['auth:sanctum']);
+});
