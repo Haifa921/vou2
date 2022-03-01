@@ -18,28 +18,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-Route::post('/register', [AuthController::class,'register']);
-Route::post('/login', [AuthController::class,'login']);
-Route::get('/loginshow/{id}', [AuthController::class,'show']);
-
-Route::post('/post', [ApiPostController::class,'store']);
-Route::get('/posts', [ApiPostController::class,'index']);
-Route::get('/posts/{id}', [ApiPostController::class,'show']);
-
-Route::post('/postd', [ApiDonateController::class,'store']);
-Route::get('/postsd', [ApiDonateController::class,'index']);
-Route::get('/postsd/{id}', [ApiDonateController::class,'show']);
-
-Route::post('/surgerysave', [ControllerSurgery::class,'store']);
-Route::get('/surgeryall', [ControllerSurgery::class,'index']);
-Route::get('/surgeryshow/{id}', [ControllerSurgery::class,'show']);
-
-Route::post('/volu1save', [ControllerSurgery::class,'store1']);
-Route::get('/volu1all', [ControllerSurgery::class,'index1']);
-Route::get('/volu1show/{id}', [ControllerSurgery::class,'show1']);
-
-Route::get('/submit', [payment::class,'submit']);
