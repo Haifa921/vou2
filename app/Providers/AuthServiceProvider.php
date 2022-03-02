@@ -30,7 +30,17 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('create-user', function (User $user) {
             return $user->is_admin
                 ? Response::allow()
-                : Response::deny();;
+                : Response::deny();
+        });
+        Gate::define('create-type', function (User $user) {
+            return $user->is_admin
+                ? Response::allow()
+                : Response::deny();
+        });
+        Gate::define('update-type', function (User $user) {
+            return $user->is_admin
+                ? Response::allow()
+                : Response::deny();
         });
     }
 }

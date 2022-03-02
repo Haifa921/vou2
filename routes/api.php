@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\DonationTypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ Route::controller(AuthController::class)->prefix('auth')->group(function () {
     Route::post('/logout', 'logout')->middleware(['auth:sanctum']);
     Route::post('/register', 'register')->middleware(['auth:sanctum']);
 });
+
+Route::apiResource('donation_types',DonationTypeController::class)->except(['destroy']);
+Route::post('donation_types/{id}',[DonationTypeController::class,'update']);
