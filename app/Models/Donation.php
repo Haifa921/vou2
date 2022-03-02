@@ -11,6 +11,7 @@ class Donation extends Model
 
     protected $guarded=[];
     protected $appends =['type_name'];
+    protected $hidden =['type'];
     
     public function getTypeNameAttribute()
     {

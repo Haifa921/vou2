@@ -46,7 +46,7 @@ class DonationController extends Controller
 
         $donation = Donation::create($request->all());
         $donation->save();
-        
+
         return response()->json(['data' => $donation], 201);
     }
 
@@ -61,5 +61,21 @@ class DonationController extends Controller
         $donation = Donation::where('id', $id)->firstOrfail();
 
         return response()->json(['data' => $donation], 200);
+    }
+
+    public function fundsIndex()
+    {
+        $data = Donation::groupBy('donation_type_id')
+            ->selectRaw('sum(amount) as total, donation_type_id')
+            ->get();
+        return response()->json(['data' => $data]);
+    }
+    
+    public function fundsShow($id)
+    {
+        $data = Donation::where('donation_type_id',$id)->groupBy('donation_type_id')
+            ->selectRaw('sum(amount) as total, donation_type_id')
+            ->get();
+        return response()->json(['data' => $data]);
     }
 }

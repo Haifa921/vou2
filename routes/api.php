@@ -28,3 +28,7 @@ Route::apiResource('donation_types',DonationTypeController::class)->except(['des
 Route::post('donation_types/{id}',[DonationTypeController::class,'update']);
 
 Route::apiResource('donations',DonationController::class)->except(['destroy','update']);
+Route::controller(DonationController::class)->prefix('donations_funds/donation_types')->group(function () {
+    Route::get('/', 'fundsIndex');
+    Route::get('/{id}', 'fundsShow');
+});
