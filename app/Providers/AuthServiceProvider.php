@@ -42,5 +42,15 @@ class AuthServiceProvider extends ServiceProvider
                 ? Response::allow()
                 : Response::deny();
         });
+        Gate::define('create-form', function (User $user) {
+            return $user->type != 'volunteer'
+                ? Response::allow()
+                : Response::deny();
+        });
+        Gate::define('form-acceptance', function (User $user) {
+            return $user->type != 'volunteer'
+                ? Response::allow()
+                : Response::deny();
+        });
     }
 }

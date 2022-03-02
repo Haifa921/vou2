@@ -15,4 +15,8 @@ class DonationType extends Model
     {
         return $this->hasMany(Donation::class);
     }
+    public function assistanceForms()
+    {
+        return $this->hasMany(AssistanceForm::class);
+    }
 }
