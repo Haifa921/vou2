@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Donation;
+use App\Models\DonationType;
 use Illuminate\Http\Request;
 
 class DonationController extends Controller
@@ -14,7 +16,8 @@ class DonationController extends Controller
      */
     public function index()
     {
-        //
+        $donations = Donation::all();
+        return response()->json(['data' => $donations], 200);
     }
 
     /**
@@ -25,7 +28,26 @@ class DonationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'donator_name' => ['required', 'min:3', 'max:255'],
+            'donator_address' => ['required', 'min:3', 'max:255'],
+            'donator_number' => ['required', 'min:6', 'max:255'],
+            'donator_email' => ['required', 'email'],
+            'amount' => [
+                'required', 'numeric',
+                function ($attribute, $value, $fail) use ($request) {
+                    $typeMinAmount = DonationType::findOrfail($request->donation_type_id)->min_amount;
+                    if ($value < $typeMinAmount) {
+                        $fail('يجب ان تكون قيمة التبرع اكبر او تساوي ' . $typeMinAmount);
+                    }
+                },
+            ],
+        ]);
+
+        $donation = Donation::create($request->all());
+        $donation->save();
+        
+        return response()->json(['data' => $donation], 201);
     }
 
     /**
@@ -36,29 +58,8 @@ class DonationController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        $donation = Donation::where('id', $id)->firstOrfail();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return response()->json(['data' => $donation], 200);
     }
 }

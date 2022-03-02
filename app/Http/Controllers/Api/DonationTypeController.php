@@ -47,10 +47,10 @@ class DonationTypeController extends Controller
             'min_amount' => ['required', 'numeric'],
             'img_url' => ['nullable', 'image', 'max:2048']
         ]);
-        
+
         $type = DonationType::create($request->except('img_url'));
         $type->img_url = $this->upload_public_file($request, 'img_url', 'type_images');
-
+        $type->save();
         return response()->json(['data' => $type], 201);
     }
 
