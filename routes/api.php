@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AssistanceFormController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DonationController;
 use App\Http\Controllers\Api\DonationTypeController;
+use App\Http\Controllers\Api\PaymentController;
 use App\Models\AssistanceForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -40,3 +41,5 @@ Route::controller(AssistanceFormController::class)->prefix('assistance_forms')->
     Route::post('/accept/{form}', 'accept');
     Route::post('/reject/{form}', 'reject');
 });
+
+Route::apiResource('payments',PaymentController::class)->except(['destroy','update']);

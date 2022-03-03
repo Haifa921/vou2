@@ -39,16 +39,21 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('update-type', function (User $user) {
             return $user->is_admin
-                ? Response::allow()
-                : Response::deny();
+            ? Response::allow()
+            : Response::deny();
         });
         Gate::define('create-form', function (User $user) {
             return $user->type != 'volunteer'
-                ? Response::allow()
-                : Response::deny();
+            ? Response::allow()
+            : Response::deny();
         });
         Gate::define('form-acceptance', function (User $user) {
             return $user->type != 'volunteer'
+            ? Response::allow()
+            : Response::deny();
+        });
+        Gate::define('create-payment', function (User $user) {
+            return $user->is_admin
                 ? Response::allow()
                 : Response::deny();
         });

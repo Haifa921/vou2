@@ -23,4 +23,10 @@ class AssistanceForm extends Model
     {
         return $this->belongsTo(DonationType::class,'type_id');
     }
+    
+    public function payment()
+    {
+        return $this->hasOne(Payment::class);
+    }
+
 }
