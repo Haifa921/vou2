@@ -5,16 +5,13 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\AssistanceForm;
 use App\Models\Donation;
+use App\Models\DonationType;
+use App\Models\Patron;
 use App\Models\Payment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
-class PaymentController extends Controller
+class PatronController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +19,8 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        $payments = Payment::with('form')->get();
-        return response()->json(['data' => $payments], 200);
+        $patrons = Patron::all();
+        return response()->json(['data' => $patrons], 200);
     }
 
     /**
@@ -34,16 +31,20 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        $isAuth = Gate::inspect('create-payment');
-        if ($isAuth->denied())
-            return response()
-                ->json([
-                    'message' => trans('messages.notAdminCreatePayment')
-                ], 403);
         $request->validate([
             'assistance_form_id' => ['required', 'exists:assistance_forms,id'],
+            'donator_name' => ['required', 'min:3', 'max:255'],
+            'donator_address' => ['required', 'min:3', 'max:255'],
+            'donator_number' => ['required', 'min:6', 'max:255'],
+            'donator_email' => ['required', 'email'],
             'amount' => [
                 'required', 'numeric',
+                function ($attribute, $value, $fail) use ($request) {
+                    $typeMinAmount = DonationType::findOrfail($request->donation_type_id)->min_amount;
+                    if ($value < $typeMinAmount) {
+                        $fail('يجب ان تكون قيمة التبرع اكبر او تساوي ' . $typeMinAmount);
+                    }
+                },
                 function ($attribute, $value, $fail) use ($request) {
                     $form = AssistanceForm::findOrfail($request->assistance_form_id);
                     $type = $form->type_id;
@@ -61,8 +62,17 @@ class PaymentController extends Controller
         $form = AssistanceForm::find($request->assistance_form_id);
         $form->is_completed = true;
         $form->save();
-        $payment = Payment::create($request->all());
-        return response()->json(['data' => $payment], 200);
+
+        $donation = Donation::create($request->except('assistance_form_id'));
+        $donation->save();
+        $payment = Payment::create($request->only('assistance_form_id', 'amount'));
+        $patron = Patron::create([
+            'donation_id' => $donation->id,
+            'payment_id' => $payment->id
+        ]);
+        $patron->load('payment', 'donation');
+
+        return response()->json(['data' => $patron], 201);
     }
 
     /**
@@ -73,31 +83,8 @@ class PaymentController extends Controller
      */
     public function show($id)
     {
-        $payment = Payment::with('form')->findOrFail($id);
+        $patrons = Patron::where('id', $id)->firstOrfail();
 
-        return response()->json(['data' => $payment], 200);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return response()->json(['data' => $patrons], 200);
     }
 }

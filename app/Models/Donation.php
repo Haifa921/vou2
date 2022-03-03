@@ -22,4 +22,9 @@ class Donation extends Model
     {
         return $this->belongsTo(DonationType::class,'donation_type_id');
     }
+    
+    public function patronFor()
+    {
+        return $this->hasOneThrough(AssistanceForm::class,Patron::class);
+    }
 }
