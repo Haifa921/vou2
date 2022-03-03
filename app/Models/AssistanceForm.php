@@ -12,6 +12,7 @@ class AssistanceForm extends Model
     protected $guarded = [];
     protected $appends = ['afordable'];
     protected $hidden = ['type'];
+    protected $wiht=['patron'];
 
     public function getAfordableAttribute()
     {
@@ -27,6 +28,11 @@ class AssistanceForm extends Model
     public function payment()
     {
         return $this->hasOne(Payment::class);
+    }
+    
+    public function patron()
+    {
+        return $this->hasOneThrough(Patron::class,Payment::class);
     }
 
 }

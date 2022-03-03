@@ -19,7 +19,7 @@ class PatronController extends Controller
      */
     public function index()
     {
-        $patrons = Patron::all();
+        $patrons = Patron::with(['payment','donation'])->get();
         return response()->json(['data' => $patrons], 200);
     }
 
@@ -83,7 +83,7 @@ class PatronController extends Controller
      */
     public function show($id)
     {
-        $patrons = Patron::where('id', $id)->firstOrfail();
+        $patrons = Patron::with(['payment','donation'])->where('id', $id)->firstOrfail();
 
         return response()->json(['data' => $patrons], 200);
     }
