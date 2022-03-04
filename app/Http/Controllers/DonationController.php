@@ -24,7 +24,7 @@ class DonationController extends Controller
      */
     public function create()
     {
-        //
+        return view('dontate.donate');
     }
 
     /**
@@ -35,7 +35,30 @@ class DonationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $this->validate($request, [
+            'donation_type_id' =>  'required',
+            'donator_name' =>  'required',
+            'donator_address' =>  'required',
+
+            'donator_number' =>  'required',
+            'donator_email' =>  'required',
+            'amount' =>  'required',
+        ]);
+
+        
+
+        $post = Donation::create([
+            'donation_type_id'=>  $request->donation_type_id,
+            'donator_name' =>  $request->donator_name,
+            'donator_address' =>   $request->donator_address,
+            'donator_number' =>   $request->donator_number,
+            'donator_email' =>   $request->donator_email,
+            'amount'=>   $request->amount
+        ]);
+
+
+        return redirect()->back();
     }
 
     /**

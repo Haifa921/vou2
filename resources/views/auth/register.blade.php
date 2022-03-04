@@ -71,10 +71,11 @@
         <div class="container-fluid pt-5">
 
                 <div class="form-group">
-                    <x-jet-label for="name" value="{{ __('Name') }}" />
-                    <x-jet-input id="name"  class="form-control mr-4 w-100" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                    <x-jet-label for="full_name" value="{{ __('full_name') }}" />
+                    <x-jet-input id="full_name"  class="form-control mr-4 w-100" type="text" name="full_name" :value="old('full_name')" required autofocus autocomplete="full_name" />
                 </div>
 
+                
                 <div class="form-group">         
                     <x-jet-label for="email" value="{{ __('Email') }}" />
                     <x-jet-input id="email"  class="form-control mr-4 w-100" type="email" name="email" :value="old('email')" required />
@@ -88,6 +89,10 @@
                 <div class="form-group">      
                     <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                     <x-jet-input id="password_confirmation"  class="form-control mr-4 w-100" type="password" name="password_confirmation" required autocomplete="new-password" />
+                </div>
+                <div class="form-group">
+                    <x-jet-label for="type" value="{{ __('type') }}" />
+                    <x-jet-input id="type"  class="form-control mr-4 w-100" type="text" name="type" :value="old('type')" required autofocus autocomplete="type" />
                 </div>
        
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())

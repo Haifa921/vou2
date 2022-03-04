@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Models\AssistanceForm;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,52 @@ class AssistanceFormController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome');
+    }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function admin()
+    {
+        return view('admin');
+    }
+    public function users()
+    {
+        return view('users');
+    }
+    public function storeadmin(Request $request)
+    {
+        $this->validate($request, [
+            'full_name' =>  'required',
+            'emai' =>  'required',
+
+            'password' =>  'required',
+            'type' =>  'required',
+        ]);
+
+        
+
+        $post = User::create([
+            
+            'full_name' =>  $request->full_name,
+            'emai' =>   $request->emai,
+            'password' =>   $request->password,
+            'type' =>   $request->type,
+        ]);
+
+
+        return redirect()->back();
+    }
+    public function destroyadmin($id)
+    {
+        $post = User::find($id);
+        $post->delete($id);
+        return redirect()->back();
     }
 
     /**
