@@ -29,7 +29,7 @@ Route::controller(AuthController::class)->prefix('auth')->group(function () {
 Route::apiResource('donation_types',DonationTypeController::class)->except(['destroy']);
 Route::post('donation_types/{id}',[DonationTypeController::class,'update']);
 
-Route::apiResource('donations',DonationController::class)->except(['destroy','update']);
+Route::apiResource('donations',DonationController::class);
 Route::controller(DonationController::class)->prefix('donations_funds/donation_types')->group(function () {
     Route::get('/', 'fundsIndex');
     Route::get('/{id}', 'fundsShow');
