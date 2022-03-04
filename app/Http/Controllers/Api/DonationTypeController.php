@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\DonationType;
-use App\traits\FileLibrary;
+use App\Traits\FileLibrary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
