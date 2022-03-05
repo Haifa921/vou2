@@ -76,28 +76,44 @@
 								<a href="http://127.0.0.1:8000/">الرئيسية</a>
 							</li>
                             <li><a href="{{ route('post.about') }}">من نحن</a></li>
-							
+							@if(Auth::user())
+              @if (Auth::user()->is_admin)
+              <li><a href="">التحكم</a></li>
+              @endif
+              @endif
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
+							@if (Route::has('login'))
+              @auth
+              <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  {{ Auth::user()->name }}
+                </a>
 
-							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
-                       
-        @if (Route::has('login'))
-                <li>
-                    @auth
-					
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-                      
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
-                        @endif
-                    @endauth
-							
-						</ul>
-					</nav>
-                  
+
+              </li>
+
+			  <li class="last">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                  </form>
+                </div>
+              </li>
+              @else
+              <li><a href="{{ route('login') }}">login</a></li>
+              @if (Route::has('register'))
+              <li class="last"><a href="{{ route('register') }}">register</a></li>
+              @endif
+              @endauth
+            </ul>
             @endif
+          </nav>
+                  
+        
 				</div>
 			</div>
 	</header>
