@@ -68,16 +68,16 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">الامان الخيري</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active">
+							<li >
 								<a href="http://127.0.0.1:8000/">الرئيسية</a>
 							</li>
                             <li><a href="{{ route('post.about') }}">من نحن</a></li>
 							
-							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
+							<li class="active"><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
 							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
                        
@@ -104,11 +104,10 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_2.jpg);">
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(../images/cover_bg_16.jpg);">
 				<div class="desc animate-box">
-					<h2><strong>Contact</strong> Us</h2>
-					<span>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></span>
-					<span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span>
+					<h2><strong>تواصل</strong> معنا</h2>
+					<span> قم بارسال اي رسالة في حال وجود اي مشكلة <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name"></a></span>
 				</div>
 			</div>
 
@@ -119,12 +118,12 @@
 				<form action="#">
 					<div class="row">
 						<div class="col-md-6">
-							<h3 class="section-title">Our Address</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h3 class="section-title"> تواصل معنا</h3>
+							<p> لا تتردد بارسال اي رسالة تساعدنا من تحسين الموقع ,او في حال وجود اي مشكلة</p>
 							<ul class="contact-info">
 								<li><i class="icon-location-pin"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-								<li><i class="icon-phone2"></i>+ 1235 2355 98</li>
-								<li><i class="icon-mail"></i><a href="#">info@yoursite.com</a></li>
+								<li><i class="icon-phone2"></i>+963938105874</li>
+								<li><i class="icon-mail"></i><a href="#">mahmoodalammar@gmail.com</a></li>
 								<li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
 							</ul>
 						</div>
@@ -132,22 +131,22 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name">
+										<input type="text" class="form-control" placeholder="الاسم">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email">
+										<input type="text" class="form-control" placeholder="الايميل">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="رسالتك لنا"></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Send Message" class="btn btn-primary">
+										<input type="submit" value=" ارسال رسالة" class="btn btn-primary">
 									</div>
 								</div>
 							</div>
@@ -173,7 +172,6 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2016 Free Html5 <a href="#">Charity</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
 						</div>
 					</div>
 				</div>

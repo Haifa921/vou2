@@ -66,6 +66,25 @@
 			 width: 424px;
 			 margin:auto;
 				}
+				.card 	{
+			 flex-direction:column; 
+			 width: 424px;
+			 margin:auto;
+			 border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem
+				}
+				.form-control 
+				{
+    		display: block;
+    		 width: 100%; 
+				}
+				.H1-color 
+				{
+    margin: unset;
+				}
+	
+
+
 	</style>
 </head>
 <body>
@@ -73,7 +92,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">صدقة</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">الامان الخيري</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -107,7 +126,7 @@
 
 	<div class="fh5co-hero">
 							<div class="fh5co-overlay"></div>
-							<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
+							<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(../images/cover_bg_3.jpg);">
 								<div class="desc animate-box">
 									<h2><strong>تبرع</strong> <strong>للأطفال الفقراء</strong></h2>
 

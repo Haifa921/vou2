@@ -61,17 +61,30 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	
+	<style>
+		
+		.btn-secondary {
+   color: #ffffff;
+				}
+				.btn {
+					background-color: #ff5722 ;
+					border:0px
+				}
+	</style>
 	</head>
 	<body>
 <div class="container">
     <div class="row">
       <div class="col">
         <div class="jumbotron">
-            <h1 class="display-4">    صلاحيات الادمن  </h1>
-            <a class="btn btn-success" href="{{url('/users')}}">اضافة متطوعين جدد  </a>
+		<div class="flex items-center justify-end mt-4 text-center">
+
+            <h1 class="display-4"  style="color:#ff5722">    صلاحيات الادمن  </h1>
+            <a class="btn btn-success" href="{{url('/users')}}" >اضافة متطوعين جدد  </a>
             <a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة عملية تبرع </a>
            </div>
+		   </div>
+
       </div>
 
     </div>

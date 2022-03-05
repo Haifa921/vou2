@@ -68,7 +68,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">الامان الخيري</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -209,7 +209,7 @@
 
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 text-center animate-box">
-						<a href="#" class="btn btn-primary btn-lg">See Gallery</a>
+						<a href="{{ route('post.about') }}" class="btn btn-primary btn-lg">See Gallery</a>
 					</div>
 				</div>
 

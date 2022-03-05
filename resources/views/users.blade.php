@@ -41,6 +41,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
+
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 	
 	<!-- Animate.css -->
@@ -61,19 +62,90 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	
+	<!--<style>
+						.jumbotron
+						{
+					background-color: #ff5722;
+							}
+							.jumbotron h1, .jumbotron .h1 {
+					color: aliceblue;
+				}
+				.form-control {
+					display: block;
+					width: 100%;
+				}
+				.card {
+					position: relative;
+					display: -ms-flexbox;
+					display: flex;
+					flex-direction: column;
+					align-content: stretch;
+					justify-content: space-around;
+					align-items: center;
+				}
+				.col-md-6 {
+					width: 50%;
+					display: contents;
+				}
+	</style>-->
+	<style>
+		 .card 	{
+			 flex-direction:column; 
+			 width: 424px;
+			 margin:auto;
+			 border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem
+				}
+				.form-control 
+				{
+    		display: block;
+    		 width: 100%; 
+				}
+				.H1-color 
+				{
+    margin: unset;
+				}
+				.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.col-md-6 {
+    width: 50%;
+    width: -webkit-fill-available;
+}
+.btn-secondary {
+   color: #ffffff;
+}
+.btn-secondary {
+   color: #ffffff;
+				}
+				.btn {
+					background-color: #ff5722 ;
+					border:0px
+				}
+
+	</style>
 	</head>
 	<body>
-<div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="jumbotron">
-            <h1 class="display-4">اضافة متطوع</h1>
-            <a class="btn btn-success" href="{{url('/admin')}}"> كل المتطوعين</a>
-           </div>
-      </div>
+		<div class="container">
+			<div class="row">
+			<div class="col">
+				<div class="jumbotron">
+					<div class="col align-self-center">
+					<div class="flex items-center justify-end mt-4 text-center">
 
-    </div>
+						<h1 class="display-4" style="color:#ff5722">اضافة متطوع</h1>
+
+						<a class="btn btn-success" href="{{url('/admin')}}" > كل المتطوعين</a>
+						</div>
+</div>
+				</div>
+			</div>
+		</div>
+	
     <div class="row">
 
         @if (count($errors) > 0)
@@ -87,42 +159,63 @@
         @endif
 
 
-      <div class="col">
-      <form action="{{route('post.storeadmin')}}" method="POST" enctype="multipart/form-data">
+		<div class="col" >
+				
+				<div class="container-fluid pt-5 pb-3">
+					
+					<div class="row justify-content-center mt-5" >
+						
+							<div class="col-md-6">
+								<div class="card">
+										<div class="card-header text-center">
+											<h1 class="H1-color" style="color=#ffffff">  قم باضافة متطوع جديد </h1>
+										</div>
+      <form action="{{route('post.storeadmin')}}" method="POST" enctype="multipart/form-data" class="w-100">
         @csrf
            
+		<div class="container-fluid pt-5">    
 
-        <div class="form-group">
-              <label for="exampleFormControlInput1">الاسم الكامل </label>
-              <input type="text" name="full_name" class="form-control"   >
-            </div>
-           
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">الايميل  </label>
-              <input type="email"  name="email"   rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">كلمة السر  </label>
-                <input type="password"  name="password" class="form-control"   >
-              </div>
+
+					<div class="form-group">
+						<label for="exampleFormControlInput1">الاسم الكامل </label>
+						<input type="text" name="full_name" class="form-control mr-4 w-100"   >
+					</div>
+				
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">الايميل  </label>
+						<input type="email"  name="email"   rows="3" class="form-control mr-4 w-100">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">كلمة السر  </label>
+						<input type="password"  name="password" class="form-control mr-4 w-100"   >
+					</div>
               <div class="form-group">
               <label for="exampleFormControlInput1">الصلاحية  </label>
 			
-																			<select name="type" id="cars">
-																				<option value= "supervisor">supervisor</option>
-																				<option value=" volunteer">volunteer </option>
+				<select name="type" id="cars">
+					<option value= "supervisor">supervisor</option>
+					<option value=" volunteer">volunteer </option>
 																			
-																			</select>
+				</select>
+        </div>
+
+            <div class="flex items-center justify-end mt-4 text-center">
+
+			<a href=""> <button class="btn btn-secondary" type="submit" style="margin:15px  ">save</button></a>
             </div>
-
-            <div class="form-group">
-
-                <button class="btn btn-danger" type="submit">save</button>
+			
             </div>
 
           </form>
-      </div>
-    </div>
-  </div>
+      
+		  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	</div>
+
   </body>
 </html>
