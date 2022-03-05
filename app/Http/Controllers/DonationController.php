@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DonationType;
 use App\Models\Donation;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,14 @@ class DonationController extends Controller
     {
         return view('dontate.donate');
     }
-
+    public function create1()
+    {
+        return view('dontate.addsurgery');
+    }
+    public function all()
+    {
+        return view('dontate.allsurgery');
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -61,6 +69,33 @@ class DonationController extends Controller
         return redirect()->back();
     }
 
+    public function store2(Request $request)
+    {
+        
+        $this->validate($request, [
+           
+            'name' =>  'required',
+            'min_amount' =>  'required',
+
+            'img_url' =>  'required|image',
+           
+        ]);
+
+        
+        $img_url = $request->photo;
+        $newPhoto = time() . $img_url->getClientOriginalName();
+        $img_url->move('uploads/posts', $newPhoto);
+        $post = DonationType::create([
+        
+            'name' =>  $request->name,
+            'min_amount' =>   $request->min_amount,
+            'img_url' =>   $request->img_url,
+           
+        ]);
+
+
+        return redirect()->back();
+    }
     /**
      * Display the specified resource.
      *

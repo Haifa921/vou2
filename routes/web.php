@@ -21,8 +21,9 @@ Route::get('/', function () {
    return view('dashboard');
  })->name('dashboard');
  Route::get('/', [App\Http\Controllers\AssistanceFormController::class, 'index']);
- Route::get('/post/create1', [App\Http\Controllers\PostController::class, 'create1'])->name('post.create1');
+ Route::get('/post/create1', [App\Http\Controllers\DonationController::class, 'create1'])->name('post.create1');
 Route::get('/post/donate', [App\Http\Controllers\DonationController::class, 'create'])->name('post.donate');
+Route::get('/post/donate1', [App\Http\Controllers\DonationController::class, 'create1'])->name('post.donate1');
 // Route::get('/post/volu1', [App\Http\Controllers\ControllerSurgery::class, 'volu1'])->name('post.volu1');
 // //Route::get('/post/create', 'PostController@create' )->name('post.create');
 // Route::post('/post/store4', [App\Http\Controllers\PostController::class, 'store4'])->name('post.store4');
@@ -35,6 +36,7 @@ Route::post('/post/store1', [App\Http\Controllers\DonationController::class, 'st
 // Route::get('/post/new', [App\Http\Controllers\PostController::class, 'newdonate'])->name('post.newdonate');
  Route::get('/admin', [App\Http\Controllers\AssistanceFormController::class, 'admin']);
  Route::get('/users', [App\Http\Controllers\AssistanceFormController::class, 'users']);
+ Route::get('/all', [App\Http\Controllers\DonationController::class, 'all']);
 // Route::get('/post/destroy/{id}', [App\Http\Controllers\Poor::class, 'destroy'])->name('post.destroy');
 // Route::post('/post/store', [App\Http\Controllers\Poor::class, 'store'])->name('post.store');
 // Route::get('/post/store/approve/{post}', [App\Http\Controllers\Poor::class, 'approve'])->name('post.approve');
@@ -43,3 +45,4 @@ Route::post('/post/store1', [App\Http\Controllers\DonationController::class, 'st
 // Route::get('/instamojo_redirect', [App\Http\Controllers\payment::class, 'instamojo_redirect']);
 Route::get('/post/destroy/{id}', [App\Http\Controllers\AssistanceFormController::class, 'destroyadmin'])->name('post.destroyadmin');
 Route::post('/post/store', [App\Http\Controllers\AssistanceFormController::class, 'storeadmin'])->name('post.storeadmin');
+Route::post('/post/store2', [App\Http\Controllers\DonationController::class, 'store2'])->name('post.store2');
