@@ -73,6 +73,62 @@
 	</style>
 	</head>
 	<body>
+	<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li class="active">
+								<a href="http://127.0.0.1:8000/">الرئيسية</a>
+							</li>
+                            <li><a href="{{ route('post.about') }}">من نحن</a></li>
+							@if(Auth::user())
+              @if (Auth::user()->is_admin)
+              <li><a href="">التحكم</a></li>
+              @endif
+              @endif
+							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
+							@if (Route::has('login'))
+              @auth
+              <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  {{ Auth::user()->name }}
+                </a>
+
+
+              </li>
+
+			  <li class="last">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                  </form>
+                </div>
+              </li>
+              @else
+              <li><a href="{{ route('login') }}">login</a></li>
+              @if (Route::has('register'))
+              <li class="last"><a href="{{ route('register') }}">register</a></li>
+              @endif
+              @endauth
+            </ul>
+            @endif
+          </nav>
+                  
+        
+				</div>
+			</div>
+	</header>
+		
+       
+
 <div class="container">
     <div class="row">
       <div class="col">
