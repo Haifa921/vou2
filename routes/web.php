@@ -37,6 +37,7 @@ Route::post('/post/store1', [App\Http\Controllers\DonationController::class, 'st
  Route::get('/admin', [App\Http\Controllers\AssistanceFormController::class, 'admin']);
  Route::get('/users', [App\Http\Controllers\AssistanceFormController::class, 'users']);
  Route::get('/all', [App\Http\Controllers\DonationController::class, 'all']);
+ Route::get('/admindo', [App\Http\Controllers\DonationController::class, 'admindo']);
 // Route::get('/post/destroy/{id}', [App\Http\Controllers\Poor::class, 'destroy'])->name('post.destroy');
 // Route::post('/post/store', [App\Http\Controllers\Poor::class, 'store'])->name('post.store');
 // Route::get('/post/store/approve/{post}', [App\Http\Controllers\Poor::class, 'approve'])->name('post.approve');

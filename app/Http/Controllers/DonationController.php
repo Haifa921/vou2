@@ -35,6 +35,10 @@ class DonationController extends Controller
     {
         return view('dontate.allsurgery');
     }
+    public function admindo()
+    {
+        return view('addo');
+    }
     /**
      * Store a newly created resource in storage.
      *
