@@ -68,8 +68,8 @@
     <div class="row">
       <div class="col">
         <div class="jumbotron">
-            <h1 class="display-4">اضافة متطوع</h1>
-            <a class="btn btn-success" href="{{url('/admin')}}"> كل المتطوعين</a>
+            <h1 class="display-4">اضافة مساعدة</h1>
+            <a class="btn btn-success" href="{{url('/checkas')}}"> كل المساعدات</a>
            </div>
       </div>
 
@@ -88,33 +88,36 @@
 
 
       <div class="col">
-      <form action="{{route('post.storeadmin')}}" method="POST" enctype="multipart/form-data">
+      <form action="{{route('post.store3')}}" method="POST" enctype="multipart/form-data">
         @csrf
            
 
         <div class="form-group">
-              <label for="exampleFormControlInput1">الاسم الكامل </label>
-              <input type="text" name="full_name" class="form-control"   >
+              <label for="exampleFormControlInput1"> نوع المساعدة </label>
+              <input type="text" name="type_id" class="form-control"   >
             </div>
            
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">الايميل  </label>
-              <input type="email"  name="email"   rows="3"></textarea>
+              <label for="exampleFormControlTextarea1">الوصف  </label>
+              <textarea type="text"  name="description"   rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">كلمة السر  </label>
-                <input type="password"  name="password" class="form-control"   >
+                <label for="exampleFormControlInput1">المبلغ المطلوب   </label>
+                <input type="text"  name="amount" class="form-control"   >
               </div>
-              <div class="form-group">
-              <label for="exampleFormControlInput1">الصلاحية  </label>
-			
-																			<select name="type" id="cars">
-																				<option value= "supervisor">supervisor</option>
-																				<option value=" volunteer">volunteer </option>
-																			
-																			</select>
-            </div>
-
+            
+			  <div class="form-group">
+                <label for="exampleFormControlInput1"> اسم الرنامج   </label>
+                <input type="text"  name="applicant_name" class="form-control"   >
+              </div>
+			  <div class="form-group">
+                <label for="exampleFormControlInput1"> العنوان   </label>
+                <input type="text"  name="applicant_address" class="form-control"   >
+              </div>
+			  <div class="form-group">
+                <label for="exampleFormControlInput1"> رقم الهاتف   </label>
+                <input type="text"  name="applicant_number" class="form-control"   >
+              </div>
             <div class="form-group">
 
                 <button class="btn btn-danger" type="submit">save</button>

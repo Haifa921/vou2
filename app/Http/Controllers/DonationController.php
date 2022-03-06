@@ -39,6 +39,10 @@ class DonationController extends Controller
     {
         return view('addo');
     }
+    public function patron()
+    {
+        return view('patron');
+    }
     /**
      * Store a newly created resource in storage.
      *
