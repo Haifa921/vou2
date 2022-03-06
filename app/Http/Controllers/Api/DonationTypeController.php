@@ -45,11 +45,10 @@ class DonationTypeController extends Controller
         $request->validate([
             'name' => ['required', 'min:3', 'max:255'],
             'min_amount' => ['required', 'numeric'],
-            'img_url' => ['nullable', 'image', 'max:2048']
+            'img_url' => ['nullable', 'string']
         ]);
 
-        $type = DonationType::create($request->except('img_url'));
-        $type->img_url = $this->upload_public_file($request, 'img_url', 'type_images');
+        $type = DonationType::create($request->all());
         $type->save();
         return response()->json(['data' => $type], 201);
     }
@@ -86,12 +85,11 @@ class DonationTypeController extends Controller
         $request->validate([
             'name' => ['required', 'min:3', 'max:255'],
             'min_amount' => ['required', 'numeric'],
-            'img_url' => ['nullable', 'image', 'max:2048']
+            'img_url' => ['nullable', 'string']
         ]);
         $type = DonationType::findOrfail($id);
 
-        $type->img_url = $this->update_file($request, 'img_url', $type->image_url, 'type_images');
-        $type->update($request->except('img_url'));
+        $type->update($request->all());
         $type->save();
         return response()->json(['data' => $type], 200);
     }

@@ -18,7 +18,7 @@ class CreateAssistanceFormsTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('type_id')->constrained('donation_types');
             $table->string('description');
-            $table->decimal('amount');
+            $table->decimal('amount',11,2);
             $table->string('applicant_name');
             $table->string('applicant_address');
             $table->string('applicant_number');
