@@ -45,7 +45,7 @@ class DonationTypeController extends Controller
         $request->validate([
             'name' => ['required', 'min:3', 'max:255'],
             'min_amount' => ['required', 'numeric'],
-            'img_url' => ['nullable', 'image', 'max:2048']
+            'img_url' => ['nullable', 'string']
         ]);
 
         $type = DonationType::create($request->all());
@@ -85,7 +85,7 @@ class DonationTypeController extends Controller
         $request->validate([
             'name' => ['required', 'min:3', 'max:255'],
             'min_amount' => ['required', 'numeric'],
-            'img_url' => ['nullable', 'image', 'max:2048']
+            'img_url' => ['nullable', 'string']
         ]);
         $type = DonationType::findOrfail($id);
 
