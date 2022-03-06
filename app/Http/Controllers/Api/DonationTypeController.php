@@ -48,8 +48,7 @@ class DonationTypeController extends Controller
             'img_url' => ['nullable', 'image', 'max:2048']
         ]);
 
-        $type = DonationType::create($request->except('img_url'));
-        $type->img_url = $this->upload_public_file($request, 'img_url', 'type_images');
+        $type = DonationType::create($request->all());
         $type->save();
         return response()->json(['data' => $type], 201);
     }
@@ -90,8 +89,7 @@ class DonationTypeController extends Controller
         ]);
         $type = DonationType::findOrfail($id);
 
-        $type->img_url = $this->update_file($request, 'img_url', $type->image_url, 'type_images');
-        $type->update($request->except('img_url'));
+        $type->update($request->all());
         $type->save();
         return response()->json(['data' => $type], 200);
     }
