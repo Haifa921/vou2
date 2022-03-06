@@ -16,7 +16,7 @@ class CreateDonationTypesTable extends Migration
         Schema::create('donation_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('min_amount');
+            $table->decimal('min_amount',11,2);
             $table->string('img_url')->nullable();
             $table->timestamps();
         });
