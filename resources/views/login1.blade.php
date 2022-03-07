@@ -106,7 +106,7 @@
                     </div>
                     <div class="flex items-center justify-end mt-4 text-center">
                     
-            <a class="btn btn-success" href="{{url('/admindo')}}" >  تسجيل الدخول </a>
+            <a class="btn btn-success" href="{{url('/asdo')}}" >  تسجيل الدخول </a>
             
                     </div>
             </div>

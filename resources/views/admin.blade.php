@@ -80,63 +80,70 @@
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
 							<li><a class="active" href="">اكفل يتيم</a></li>
-                       
-        @if (Route::has('login'))
-                <li>
-                    @auth
-					
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-                      
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
-                        @endif
-                    @endauth
+							<li><a class="active" href="{{url('/login1')}}"> logout</a></li>
+         
+
+               
 							
 						</ul>
 					</nav>
                   
-            @endif
+            
 				</div>
 			</div>
 	</header>
 		
 <div class="container">
                     <div class="row">
-                        @if ($posts->count() > 0 )
+                
                         <div class="col">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">fullname</th>
-                                        <th scope="col"> Date</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">password</th>
-                                        <th scope="col">type</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col">الاسم الكامل </th>
+                                        <th scope="col"> الايميل</th>
+                                        <th scope="col">كلمة السر</th>
+                                        <th scope="col">من هو</th>
+                                        
+                                        <th scope="col">الصلاحية</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php
-                                    $i = 1;
-                                    @endphp
-                                    @foreach ($posts as $item)
+                                  
                                     <tr>
-                                        <th scope="row">{{$i++}}</th>
-                                        <td>{{$item->full_name}}</td>
-                                        <td>{{$item->created_at->diffForhumans() }}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td>{{$item->pasword}}</td>
-                                        <td>{{$item->type}}</td>
+                                        <th scope="row"></th>
+                                        <td>عبادة </td>
+                                        <td>obada@gmail.com</td>
+                                        <td>********</td>
+                                        <td>supervisor</td>
+                                        
                                         <td>
                                             
-                                            @if ($item->user_id == Auth::id() || Auth::user()->is_admin)
-                                            &nbsp;&nbsp;
+                                           
+										<a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
+
+
+
+
                                             
-                                            <a class="text-danger" href="{{route('post.destroyadmin',['id'=> $item->id])}}"> <i class="fas  fa-2x fa-trash-alt"></i> </a>
+                      
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <th scope="row"></th>
+                                        <td>طارق </td>
+                                        <td>tareq@gmail.com</td>
+                                        <td>********</td>
+                                        <td>volunteer</td>
+                                        
+                                        <td>
                                             
+                                           
+										<a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
+
+
+
 
                                             
                       
@@ -149,14 +156,7 @@
 
 
                         </div>
-                        @else
-                        <div class="col">
-                            <div class="alert alert-danger" role="alert">
-                                Not posts
-                            </div>
-                        </div>
-
-                        @endif
+                      
 
 
                     </div>

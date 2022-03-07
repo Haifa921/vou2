@@ -69,7 +69,7 @@
       <div class="col">
         <div class="jumbotron">
             <h1 class="display-4">اضافة عملية جراحية وعملية تبرع  </h1>
-            <a class="btn btn-success" href="{{url('/all')}}"> كل العمليات</a>
+            
            </div>
       </div>
 

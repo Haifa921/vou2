@@ -80,105 +80,108 @@
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
 							<li><a class="active" href="">اكفل يتيم</a></li>
-							<li><a class="active" href="{{url('/')}}"> logout</a></li>
-        
-                  
-							
+                            
+                            <li class="last"><a href="{{ url('/asdo') }}">المشرف</a></li>
+
 						</ul>
 					</nav>
-
-            
+                  
+        
 				</div>
 			</div>
 	</header>
 		
 <div class="container">
                     <div class="row">
-                        
+                    
                         <div class="col">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">اسم عملية التبرع</th>
-                                        <th scope="col"> المبلغ المطلوب</th>
-                                        <th scope="col">صورة</th>
-                                       
-                                       
-                                        <th scope="col">الصلاحية</th>
+                                        <th scope="col">نوع المساعدة </th>
+                                        <th scope="col"> الوصف</th>
+                                        <th scope="col">المبلغ المطلوب</th>
+                                        <th scope="col">اسم الرنامج</th>
+                                        <th scope="col">العنوان</th>
+                                        
+                                        <th scope="col">رقم الهاتف</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                 
                                     <tr>
                                         <th scope="row"></th>
-                                        <td>نفقات طبية</td>
+                                        <td> غذائية</td>
+                                        <td>للفقراء</td>
                                         <td>200000</td>
-                                        <td><img src="" alt="Girl in a jacket"></td>
+                                        <td>سلة غذائية</td>
+                                        <td>دمشق</td>
+                                        <td>0975432125</td>
                                         <td>
-                                          
-                                        </td>
-                                        <td>
-                                            
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
-
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
-
-                                            
                       
-                                        </td>
-                                    </tr>
-									<tr>
-                                        <th scope="row"></th>
-                                        <td> جراحة كلية</td>
-                                        <td>200000</td>
-                                        <td><img src="" alt="Girl in a jacket"></td>
-                                        <td>
-                                          
-                                        </td>
-                                        <td>
-                                            
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
-
-                                            
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
-
-                      
-                                        </td>
-                                    </tr>
-									<tr>
-                                        <th scope="row"></th>
-                                        <td>جراحة طبية</td>
-                                        <td>200000</td>
-                                        <td><img src="" alt="Girl in a jacket"></td>
-                                        <td>
-                                          
-                                        </td>
-                                        <td>
-                                            
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
-
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
-
+                                         
                       
                                         </td>
                                     </tr>
                                     
-
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td> غذائية</td>
+                                        <td>للفقراء</td>
+                                        <td>200000</td>
+                                        <td>سلة غذائية</td>
+                                        <td>دمشق</td>
+                                        <td>0975432125</td>
+                                        <td>
+               
+                                         
+                      
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td>  صحي</td>
+                                        <td>للفقراء</td>
+                                        <td>200000</td>
+                                        <td>طرد صحي</td>
+                                        <td>دمشق</td>
+                                        <td>0975432125</td>
+                                        <td>
+               
+                                         
+                      
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td> تدفئة</td>
+                                        <td>للفقراء</td>
+                                        <td>200000</td>
+                                        <td> بطانيات</td>
+                                        <td>دمشق</td>
+                                        <td>0975432125</td>
+                                        <td>
+               
+                                         
+                      
+                                        </td>
+                                    </tr>
+                                    
                                 </tbody>
                             </table>
 
 
                         </div>
-                       
+        
+                        <div class="col">
+                            <div class="alert alert-danger" role="alert">
+                            
+                            </div>
+                        </div>
 
-                    
+            
 
 
                     </div>

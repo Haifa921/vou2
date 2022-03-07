@@ -80,13 +80,12 @@
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
 							<li><a class="active" href="">اكفل يتيم</a></li>
-							<li><a class="active" href="{{url('/')}}"> logout</a></li>
+							<li><a class="active" href="{{url('/login2')}}"> logout</a></li>
         
-                  
 							
 						</ul>
 					</nav>
-
+                  
             
 				</div>
 			</div>
@@ -105,7 +104,7 @@
                                         <th scope="col">صورة</th>
                                        
                                        
-                                        <th scope="col">الصلاحية</th>
+                                    
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -120,11 +119,7 @@
                                         </td>
                                         <td>
                                             
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
-
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
+                                         
 
                                             
                       
@@ -140,13 +135,8 @@
                                         </td>
                                         <td>
                                             
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
 
                                             
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
-
                       
                                         </td>
                                     </tr>
@@ -160,16 +150,26 @@
                                         </td>
                                         <td>
                                             
-                                            <a class="btn btn-success" href="{{url('/accept1')}}"> قبول</a>
-                                           
-                                            <a class="btn btn-success" href="{{url('/')}}"> حذف</a> 
 
-											<a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة</a>
-
+                                            
                       
                                         </td>
                                     </tr>
-                                    
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td> جراحة كلية</td>
+                                        <td>200000</td>
+                                        <td><img src="" alt="Girl in a jacket"></td>
+                                        <td>
+                                          
+                                        </td>
+                                        <td>
+                                       
+
+                                            
+                      
+                                        </td>
+                                    </tr>
 
                                 </tbody>
                             </table>

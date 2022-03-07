@@ -69,7 +69,7 @@
       <div class="col">
         <div class="jumbotron">
             <h1 class="display-4">اضافة مساعدة</h1>
-            <a class="btn btn-success" href="{{url('/checkas')}}"> كل المساعدات</a>
+            
            </div>
       </div>
 
