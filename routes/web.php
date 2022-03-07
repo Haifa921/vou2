@@ -31,6 +31,9 @@ Route::post('/post/store3', [App\Http\Controllers\AssistanceFormController::clas
  Route::get('/post/contact', [App\Http\Controllers\AssistanceFormController::class, 'contact'])->name('post.contact');
  Route::get('/post/about', [App\Http\Controllers\AssistanceFormController::class, 'about'])->name('post.about');
 
+ Route::get('/accept', [App\Http\Controllers\AssistanceFormController::class, 'accept']);
+ Route::get('/accept1', [App\Http\Controllers\AssistanceFormController::class, 'accept1']);
+ Route::get('/login2', [App\Http\Controllers\AssistanceFormController::class, 'login2']);
  Route::get('/admin', [App\Http\Controllers\AssistanceFormController::class, 'admin']);
  Route::get('/users', [App\Http\Controllers\AssistanceFormController::class, 'users']);
  Route::get('/all', [App\Http\Controllers\DonationController::class, 'all']);
@@ -40,6 +43,7 @@ Route::post('/post/store3', [App\Http\Controllers\AssistanceFormController::clas
  Route::get('/assistance', [App\Http\Controllers\AssistanceFormController::class, 'assistance']);
  Route::get('/voludo', [App\Http\Controllers\AssistanceFormController::class, 'voludo']);
  Route::get('/checkas', [App\Http\Controllers\AssistanceFormController::class, 'checkas']);
+ Route::get('/login1', [App\Http\Controllers\AssistanceFormController::class, 'login1']);
  Route::get('/approve', [App\Http\Controllers\AssistanceFormController::class, 'approve']);
 Route::get('/post/destroy/{id}', [App\Http\Controllers\AssistanceFormController::class, 'destroyadmin'])->name('post.destroyadmin');
 Route::post('/post/store', [App\Http\Controllers\AssistanceFormController::class, 'storeadmin'])->name('post.storeadmin');

@@ -80,7 +80,7 @@
 							<li><a href="{{ route('post.contact') }}">تواصل معنا</a></li>
 
 							<li><a class="active" href="">اكفل يتيم</a></li>
-                       
+							<li class="last"><a href="{{ url('/') }}">logout</a></li>
         @if (Route::has('login'))
                 <li>
                     @auth
@@ -132,7 +132,7 @@
                                         <td>0975432125</td>
                                         <td>
                                             
-            <a class="btn btn-success" href="{{url('/')}}"> قبول    </a>
+            <a class="btn btn-success" href="{{url('/accept')}}"> قبول    </a>
             <a class="btn btn-success" href="{{url('/')}}"> حذف    </a>
                                          
                       
@@ -149,7 +149,7 @@
                                         <td>0975432125</td>
                                         <td>
                                             
-            <a class="btn btn-success" href="{{url('/')}}"> قبول    </a>
+            <a class="btn btn-success" href="{{url('/accept')}}"> قبول    </a>
             <a class="btn btn-success" href="{{url('/')}}"> حذف    </a>
                                          
                       

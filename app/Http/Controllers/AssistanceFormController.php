@@ -48,6 +48,22 @@ class AssistanceFormController extends Controller
     {
         return view('checkas');
     }
+    public function login1()
+    {
+        return view('login1');
+    }
+    public function login2()
+    {
+        return view('login2');
+    }
+    public function accept()
+    {
+        return view('accept');
+    }
+    public function accept1()
+    {
+        return view('accept1');
+    }
     public function storeadmin(Request $request)
     {
         $this->validate($request, [

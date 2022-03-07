@@ -201,7 +201,8 @@
 
             <div class="flex items-center justify-end mt-4 text-center">
 
-			<a href=""> <button class="btn btn-secondary" type="submit" style="margin:15px  ">save</button></a>
+           
+            <a class="btn btn-success" href="{{url('/admin')}}">    save </a>
             </div>
 			
             </div>

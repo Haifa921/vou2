@@ -113,9 +113,9 @@
                 </div>
               </li>
               @else
-              <li><a href="{{ route('login') }}">login</a></li>
+              
               @if (Route::has('register'))
-              <li class="last"><a href="{{ route('register') }}">register</a></li>
+              <li class="last"><a href="{{ url('/login') }}">logout</a></li>
               @endif
               @endauth
             </ul>

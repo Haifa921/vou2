@@ -137,7 +137,7 @@
 
             <h1 class="display-4"  style="color:#ff5722">    صلاحيات الادمن  </h1>
             <a class="btn btn-success" href="{{url('/users')}}" >اضافة متطوعين جدد  </a>
-            <a class="btn btn-success" href="{{url('/post/donate1')}}"> اضافة عملية تبرع </a>
+            <a class="btn btn-success" href="{{url('/all')}}"> اضافة عملية تبرع </a>
            </div>
 		   </div>
 
