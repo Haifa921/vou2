@@ -61,16 +61,58 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	
+	<style>
+		 .card 	{
+			 flex-direction:column; 
+			 width: 424px;
+			 margin:auto;
+			 border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem
+				}
+				.form-control 
+				{
+    		display: block;
+    		 width: 100%; 
+				}
+				.H1-color 
+				{
+    margin: unset;
+				}
+				.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.col-md-6 {
+    width: 50%;
+    width: -webkit-fill-available;
+}
+.btn-secondary {
+   color: #ffffff;
+}
+.btn-secondary {
+   color: #ffffff;
+				}
+				.btn {
+					background-color: #ff5722 ;
+					border:0px
+				}
+
+	</style>
 	</head>
 	<body>
 <div class="container">
     <div class="row">
       <div class="col">
         <div class="jumbotron">
-            <h1 class="display-4">اضافة عملية جراحية وعملية تبرع  </h1>
+		<div class="flex items-center justify-end mt-4 text-center">
+
+            <h1 class="display-4" style="color:#ff5722">اضافة عملية جراحية وعملية تبرع  </h1>
             <a class="btn btn-success" href="{{url('/all')}}"> كل العمليات</a>
            </div>
+		   </div>
       </div>
 
     </div>
@@ -87,10 +129,23 @@
         @endif
 
 
-      <div class="col">
+      
+		<div class="col" >
+				
+				<div class="container-fluid pt-5 pb-3">
+					
+					<div class="row justify-content-center mt-5" >
+						
+							<div class="col-md-6">
+								<div class="card">
+										<div class="card-header text-center">
+											<h1 class="H1-color" style="color=#ffffff">  قم باضافة  عملية </h1>
+										</div>
+		  
       <form action="{{route('post.store2')}}" method="POST" enctype="multipart/form-data">
         @csrf
-           
+		<div class="container-fluid pt-5">    
+
 
         <div class="form-group">
               <label for="exampleFormControlInput1"> اسم عملية التبرع </label>
@@ -106,14 +161,23 @@
                 <input type="file"  name="img_url" class="form-control"   >
               </div>
 
-            <div class="form-group">
+			  <div class="flex items-center justify-end mt-4 text-center">
 
-                <button class="btn btn-danger" type="submit">save</button>
+                <button class="btn btn-danger" type="submit"  style="margin:15px ">save</button>
+				</div>
+
+            </div>
             </div>
 
           </form>
       </div>
     </div>
   </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
   </body>
 </html>
