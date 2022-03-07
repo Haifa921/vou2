@@ -96,30 +96,20 @@
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active">
-								<a href="index.html">الرئيسية</a>
+						<li class="active">
+								<a href="{{ url('/') }}">الرئيسية</a>
 							</li>
-                            <li><a href="">من نحن</a></li>
+                            <li><a href="{{ url('/post/about') }}">من نحن</a></li>
 
-							<li><a href="">تواصل معنا</a></li>
-							<li><a class="active" href="{{ route('post.create1') }}">اكفل يتيم</a></li>
+							<li><a href="{{ url('/post/contact') }}">تواصل معنا</a></li>
+							<li><a class="active" href="{{ url('/patron') }}">اكفل يتيم</a></li>
 
-        @if (Route::has('login'))
-                <li>
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">تطوع الان</a></li>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
-                        @endif
-                    @endauth
+							<li><a class="active" href="{{ url('/login') }}">تطوع الان </a></li>
 
 						</ul>
 					</nav>
 
-            @endif
+        
 				</div>
 			</div>
 	</header>

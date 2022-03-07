@@ -95,8 +95,7 @@
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
             </div>
-                    <div > <a class=""  href="http://127.0.0.1:8000/register"   > متطوع جديد؟</a></div>
-                    <div> <a  href="http://127.0.0.1:8000/register"   > خدمات غير المتطوعين</a></div>
+                    
                     <div class="flex items-center justify-end mt-4">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
